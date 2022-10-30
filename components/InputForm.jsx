@@ -14,13 +14,14 @@ export default function InputForm({ login }) {
   const password = useRef();
   const emailError = useRef()
   const passwordError = useRef();
+  const regex = new RegExp(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/)
 
   async function submitHandler(event) {
     event.preventDefault();
     if (email.current.value === "" && password.current.value === "") {
       email.current.className = 'backdrop-blur font-[Segoe-UI] bg-white/10 mt-4 border border-red-500 text-white text-md  outline-none rounded p-2 w-10/12 lg:w-full sm:w-9/12 md:w-11/12'
       emailError.current.innerHTML = "Email is Required"
-    } else if (!new RegExp(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/).test(email.current.value)) {
+    } else if (!regex.test(email.current.value)) {
       email.current.className = 'backdrop-blur font-[Segoe-UI] bg-white/10 mt-4 border border-red-500 text-white text-md  outline-none rounded p-2 w-10/12 lg:w-full sm:w-9/12 md:w-11/12'
       emailError.current.innerHTML = "Email is not Valid"
     } else {
@@ -40,8 +41,8 @@ export default function InputForm({ login }) {
     }
 
     // TESTING HARSHIT
-    if (regex.test(email.current.value) && password.current.value !== "") {
-      login(email.current.value, password.current.value)
+    if( regex.test(email.current.value) && password.current.value !== "" ){
+      login(email.current.value , password.current.value)
       email.current.innerHTML = ""
       password.current.innerHTML = ""
     }

@@ -52,20 +52,20 @@ export default function SinputForm({ signIn }) {
       password.current.className = 'backdrop-blur font-[Segoe-UI] bg-white/10 mt-4 focus:ring-1 ring-[#E346D1] focus:ring-inset text-white text-md  outline-none rounded p-2 w-10/12 lg:w-full sm:w-9/12 md:w-11/12'
       passwordError.current.innerHTML = ""
     }
-    if (cpassword.current.value === "") {
-      cpassword.current.className = 'backdrop-blur font-[Segoe-UI] bg-white/10 mt-4 border border-red-500 text-white text-md  outline-none rounded p-2 w-10/12 lg:w-full sm:w-9/12 md:w-11/12'
-      cpasswordError.current.innerHTML = "Confirm-Password is Required"
+    if (password.current.value === "") {
+      password.current.className = 'backdrop-blur font-[Segoe-UI] bg-white/10 mt-4 border border-red-500 text-white text-md  outline-none rounded p-2 w-10/12 lg:w-full sm:w-9/12 md:w-11/12'
+      passwordError.current.innerHTML = "Confirm-Password is Required"
     } else if (password.current.value !== cpassword.current.value) {
-      cpassword.current.className = 'backdrop-blur font-[Segoe-UI] bg-white/10 mt-4 border border-red-500 text-white text-md  outline-none rounded p-2 w-10/12 lg:w-full sm:w-9/12 md:w-11/12'
-      cpasswordError.current.innerHTML = "password doesn't match"
+      password.current.className = 'backdrop-blur font-[Segoe-UI] bg-white/10 mt-4 border border-red-500 text-white text-md  outline-none rounded p-2 w-10/12 lg:w-full sm:w-9/12 md:w-11/12'
+      passwordError.current.innerHTML = "password doesn't match"
     }
     else {
       cpassword.current.className = 'backdrop-blur font-[Segoe-UI] bg-white/10 mt-4 focus:ring-1 ring-[#E346D1] focus:ring-inset text-white text-md  outline-none rounded p-2 w-10/12 lg:w-full sm:w-9/12 md:w-11/12'
       cpasswordError.current.innerHTML = ""
     }
     // TEST HARSHIT
-    if(new RegExp(/^[A-Za-z][A-Za-z0-9_]{3,29}$/).test(fname.current.value) && new RegExp(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/).test(email.current.value) && password.current.value === cpassword.current.value){
-      signIn( fname.current.value , email.current.value , password.current.value )
+    if (new RegExp(/^[A-Za-z][A-Za-z0-9_]{3,29}$/).test(fname.current.value) && new RegExp(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/).test(email.current.value) && password.current.value === cpassword.current.value) {
+      signIn(fname.current.value, email.current.value, password.current.value)
       fname.current.innerHTML = ""
       email.current.innerHTML = ""
       password.current.innerHTML = ""
