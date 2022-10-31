@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26.11" height="26.11" viewBox="0 0 26.11 26.11">
+  <g id="Icon_ionic-ios-sunny" data-name="Icon ionic-ios-sunny" transform="translate(-3.375 -3.375)">
+    <g id="Group_241" data-name="Group 241" transform="translate(3.375 3.375)">
+      <path id="Path_829" data-name="Path 829" d="M17.884,27.211a.967.967,0,0,0-.967.967v2.9a.967.967,0,0,0,1.933,0v-2.9A.967.967,0,0,0,17.884,27.211Z" transform="translate(-4.829 -5.934)"/>
+      <path id="Path_830" data-name="Path 830" d="M17.884,3.375a.967.967,0,0,0-.967.967v2.9a.967.967,0,1,0,1.933,0v-2.9A.967.967,0,0,0,17.884,3.375Z" transform="translate(-4.829 -3.375)"/>
+      <path id="Path_831" data-name="Path 831" d="M8.208,17.884a.967.967,0,0,0-.967-.967h-2.9a.967.967,0,0,0,0,1.933h2.9A.967.967,0,0,0,8.208,17.884Z" transform="translate(-3.375 -4.829)"/>
+      <path id="Path_832" data-name="Path 832" d="M31.077,16.917h-2.9a.967.967,0,1,0,0,1.933h2.9a.967.967,0,1,0,0-1.933Z" transform="translate(-5.934 -4.829)"/>
+      <path id="Path_833" data-name="Path 833" d="M10.36,24.195a.964.964,0,0,0-.684.282L7.623,26.529A.967.967,0,0,0,8.991,27.9l2.052-2.052a.967.967,0,0,0-.684-1.651Z" transform="translate(-3.801 -5.61)"/>
+      <path id="Path_834" data-name="Path 834" d="M25.161,11.326a.964.964,0,0,0,.684-.282L27.9,8.991a.967.967,0,0,0-1.368-1.368L24.477,9.675a.967.967,0,0,0,.684,1.651Z" transform="translate(-5.61 -3.801)"/>
+      <path id="Path_835" data-name="Path 835" d="M8.991,7.623A.967.967,0,0,0,7.623,8.991l2.052,2.052a.967.967,0,0,0,1.368-1.368Z" transform="translate(-3.801 -3.801)"/>
+      <path id="Path_836" data-name="Path 836" d="M25.845,24.477a.967.967,0,0,0-1.368,1.368L26.529,27.9A.967.967,0,0,0,27.9,26.529Z" transform="translate(-5.61 -5.61)"/>
+    </g>
+    <path id="Path_837" data-name="Path 837" d="M17.275,11.25A6.025,6.025,0,1,0,23.3,17.275a6.035,6.035,0,0,0-6.025-6.025Z" transform="translate(-0.845 -0.845)"/>
+  </g>
+</svg>
