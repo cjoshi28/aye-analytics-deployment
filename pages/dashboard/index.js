@@ -6,10 +6,13 @@ import setting from "../../public/images/dashboard/Layer 2.svg"
 import sunny from "../../public/images/dashboard/Icon ionic-ios-sunny.svg"
 import menu from "../../public/images/dashboard/Group 243.svg"
 import bell from "../../public/images/dashboard/Icon feather-bell.svg"
+import Reactangle from "../../public/images/dashboard/Rectangle 1719.svg"
 import Image from "next/image";
 import Stats from '../../components/dashboard/stats'
 import dynamic from 'next/dynamic';
 import Refreance from '../../Components/Dashboard/Refreance'
+import UserTable from '../../components/dashboard/UserTable/UserTable'
+
 
 const Chart = dynamic(() => { return import('../../components/dashboard/Chart') }, { ssr: false });
 
@@ -20,16 +23,18 @@ export default function index() {
 
     return (
 
-        <div className="flex bg-gray-100 max-h-screen ">
+        <div className="flex bg-[#E9EEF5] max-h-screen ">
             <aside className="hidden sm:flex sm:flex-col h-[100vh] border-2">
-                <a href="#" className="inline-flex items-center justify-center bg-white h-20 w-20">
-                    <Image src={logo} alt="Logo" />
+                <a href="#" className="inline-flex items-center justify-center bg-white p-5">
+                    <Image src={logo} className="w-[48px] h-[37px]" alt="Logo" />
                 </a>
                 <div className="flex-grow flex flex-col justify-between text-gray-500 bg-white">
                     <nav className="flex flex-col mx-4 my-6 space-y-4">
                         <a href="#" className="inline-flex items-center justify-center py-3 rounded-lg">
                             <span className="sr-only">Folders</span>
-                            <Image src={back} alt="Logo" />
+                            <div className='h-[55px] w-[55px] flex items-center justify-center rounded-lg' style={{ backgroundImage: `url(${Reactangle})` }}>
+                                <Image src={back} className="h-[38px] w-[38px]" alt="Logo" />
+                            </div>
                         </a>
                         <a href="#" className="inline-flex items-center justify-center py-3 rounded-lg">
                             <span className="sr-only">Folders</span>
@@ -59,22 +64,22 @@ export default function index() {
 
                     <div className="flex items-center ml-auto">
                         <div className="relative w-full max-w-md sm:-ml-2">
-                            <svg aria-hidden="true" viewBox="0 0 20 20" fill="currentColor" className="absolute h-6 w-6 mt-2.5 ml-2 text-gray-400">
+                            <svg aria-hidden="true" viewBox="0 0 20 20" className="absolute h-6 w-6 mt-2.5 ml-2 text-gray-400">
                                 <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
                             </svg>
-                            <input type="text" role="search" placeholder="Search..." className="py-1 pl-10 pr-4 w-full border-2 border-gray placeholder-[#E9EEF5] focus:bg-[gray-50] rounded-full" />
+                            <input type="text" role="search" placeholder="Search..." className="py-1 pl-10 pr-4 w-full border-2 border-gray bg-[#E9EEF5] rounded-full" />
                         </div>
                         <div className=" flex items-center pl-3 ml-3 space-x-3">
                             <div className="relative ">
-                                <Image src={sunny} alt="Logo" />
+                                <Image src={sunny} className="w-[26px]" alt="Logo" />
                             </div>
                             <div className="relative">
 
-                                <Image src={bell} alt="Logo" />
+                                <Image src={bell} className="w-[19px] h-[21px]" alt="Logo" />
                             </div>
 
                             <div className="relative ">
-                                <Image src={menu} alt="Logo" />
+                                <Image src={menu} className="w-[19px]" alt="Logo" />
                             </div>
                         </div>
                     </div>
@@ -87,13 +92,24 @@ export default function index() {
                         <Stats />
                         <Stats />
                     </section>
-                    <section>
-                        <Chart />
+                    <section className='flex'>
+                        <Chart className="flex-1" />
+                        <div className=' rounded-3xl flex-1'>
+                            <div>
+                                <div className='mt-5 font-[Segoe-UI-Bold] first-letter  flex flex-row  justify-between '>
+                                    <span className='ml-4'>Recent Wallet Worth</span>
+                                    <div className='text-[#EE61C9]  items-end'>
+                                        <span className='mr-4'>View all</span>
+                                    </div>
+                                </div>
+                                <UserTable />
+                            </div>
+                        </div>
                     </section>
                     <section>
                         <Refreance />
                     </section>
-                    
+
 
 
 

@@ -5,7 +5,7 @@ export default function stats() {
         <div className="flex items-start justify-between  p-6 bg-white shadow rounded-lg">
             <div>
                 <span className="block text-2xl font-bold">Total Visitors</span>
-                <div className='flex items-baseline space-x-2'> <span className="block text-[32px] text-black font-extrabold">1.3K </span> <span className="block text-[#53D0A4] font-bold">+21% </span></div>
+                <div className='flex items-baseline space-x-2'> <span className="block text-[32px] text-black font-bold ">1.3K </span> <span className="block text-[#53D0A4] font-bold">+21% </span></div>
             </div>
             <div className="inline-flex flex-shrink-0 items-center justify-center h-10 w-10 text-purple-600 bg-purple-100 rounded-lg mr-6">
                 <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
