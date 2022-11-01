@@ -24,10 +24,10 @@ export default function RegisterForm({ signIn }) {
 
   const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i;
   const passRegex = /^([a-zA-Z0-9@*#]{8,15})$/i;
-
+  const nameRegex = /^[A-Za-z][A-Za-z0-9_]{3,29}$/i;
   async function submitHandler(event) {
     event.preventDefault();
-    if (name.current.value !== "" && email.current.value !== "" && password.current.value !== "") {
+    if ( name.current.value !== "" && email.current.value !== "" && password.current.value !== "" && cpassword.current.value !== "" ) {
       name.current.className = inputCss
       nameError.current.innerHTML = ""
       email.current.className = inputCss
@@ -36,53 +36,103 @@ export default function RegisterForm({ signIn }) {
       passwordError.current.innerHTML = ""
       cpassword.current.className = inputCss
       cpassword.current.innerHTML = ""
-      if (passRegex.test(password.current.value) && emailRegex.test(email.current.value)) {
-        signIn(name.current.value, email.current.value, password.current.value, cpassword.current.value)
+      if(!passRegex.test(password.current.value) && password.current.value === cpassword.current.value){
+        cpassword.current.className = validCss
+        cpasswordError.current.innerHTML = ""
+      }
+      if ( passRegex.test(password.current.value) && emailRegex.test(email.current.value) && password.current.value === cpassword.current.value ) {
+        signIn( name.current.value , email.current.value , password.current.value )
         name.current.innerHTML = ""
         email.current.innerHTML = ""
         password.current.innerHTML = ""
         cpassword.current.innerHTML = ""
       } else {
+        
+        if (!nameRegex.test(name.current.value)) {
+          name.current.className = validCss
+          nameError.current.innerHTML = "More then 3 charaters"
+        }
+
+        if (!emailRegex.test(email.current.value)) {
+          email.current.className = validCss
+          emailError.current.innerHTML = "Email is not Valid"
+        }
+
         if (!passRegex.test(password.current.value)) {
           password.current.className = validCss
           passwordError.current.innerHTML = "Must include [{A,Z},{a,z},{0,9},{!@#$%^&}]"
         }
-        if (!emailRegex.test(email.current.value)) {
-          email.current.className = validCss
-          emailError.current.innerHTML = "Email is not Valid"
+
+        if (password.current.value !== cpassword.current.value) {
+          cpassword.current.className = validCss
+          cpasswordError.current.innerHTML = "Password doesn't match"
         }
+
       }
-    } else {
-      if (email.current.value === "") {
+    }else if(name.current.value === "" || email.current.value === "" || password.current.value === "" || cpassword.current.value === ""){
+      
+      if(name.current.value === ""){
+        name.current.className = validCss
+        nameError.current.innerHTML = "Name is Required"
+      }else if(!nameRegex.test(name.current.value)){
+        name.current.className = validCss
+        nameError.current.innerHTML = "More then 3 charaters"
+      }else{
+        name.current.className = inputCss
+        nameError.current.innerHTML = ""
+      }
+
+      if(email.current.value === ""){
         email.current.className = validCss
         emailError.current.innerHTML = "Email is Required"
-        if (password.current.value === "") {
+      }else if(!emailRegex.test(email.current.value)){
+        email.current.className = validCss
+        emailError.current.innerHTML = "Email is not Valid"
+      }else{
+        email.current.className = inputCss
+        emailError.current.innerHTML = ""
+      }
+
+      if( password.current.value === "" || cpassword.current.value === "" ){
+        if(password.current.value === ""){
           password.current.className = validCss
           passwordError.current.innerHTML = "Password is Required"
-        } else if (!passRegex.test(password.current.value)) {
+        }else if(!passRegex.test(password.current.value)){
           password.current.className = validCss
           passwordError.current.innerHTML = "Must include [{A,Z},{a,z},{0,9},{!@#$%^&}]"
-        } else {
+        }else if(password.current.value !== cpassword.current.value){
+          cpassword.current.className = validCss
+          cpasswordError.current.innerHTML = "Password doesn't match"
+        }else{
           password.current.className = inputCss
           passwordError.current.innerHTML = ""
         }
-      } else if (email.current.value !== "") {
-        if (!emailRegex.test(email.current.value)) {
-          email.current.className = validCss
-          emailError.current.innerHTML = "Email is not Valid"
-        } else {
-          email.current.className = inputCss
-          emailError.current.innerHTML = ""
+
+        if(cpassword.current.value === ""){
+          cpassword.current.className = validCss
+          cpasswordError.current.innerHTML = "This cannot be empty"
+        }else if(password.current.value !== cpassword.current.value){
+          cpassword.current.className = validCss
+          cpasswordError.current.innerHTML = "Password doesn't match"
+        }else{
+          cpassword.current.className = inputCss
+          cpassword.current.innerHTML = ""
         }
-        if (password.current.value === "") {
-          password.current.className = validCss
-          passwordError.current.innerHTML = "Password is Required"
-        } else if (!passRegex.test(password.current.value)) {
+      }else{
+        if(!passRegex.test(password.current.value)){
           password.current.className = validCss
           passwordError.current.innerHTML = "Must include [{A,Z},{a,z},{0,9},{!@#$%^&}]"
-        } else {
+        }else{
           password.current.className = inputCss
           passwordError.current.innerHTML = ""
+        }
+
+        if(password.current.value !== cpassword.current.value){
+          cpassword.current.className = validCss
+          cpasswordError.current.innerHTML = "Password doesn't match"
+        }else{
+          cpassword.current.className = inputCss
+          cpasswordError.current.innerHTML = ""
         }
       }
     }
@@ -122,5 +172,6 @@ export default function RegisterForm({ signIn }) {
           <input type="submit" value="Sign Up" className="btn-css" disabled={!verify} />
         </div>
       </form>
-    </div>)
+    </div>
+  )
 }

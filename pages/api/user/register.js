@@ -3,14 +3,14 @@ import { userRegister } from "../../../model/userRegister";
 import { Encrypter } from "../../../library/helper";
 
 export default async function Register(req , res){
-    const { method } = req;
     const { name , email , password } = req.body;
+    const { method } = req;
     await connect_database().then(async()=>{
         switch ( method ){
             case "POST": {
                 const encryptedPassword = Encrypter(password)
-                const findUser = await userRegister.findone({email: email})
-                if(findUser !== null){
+                const findUser = await userRegister.findOne({email: email})
+                if(findUser === null){
                     const user = userRegister({
                         name: name,
                         email: email,

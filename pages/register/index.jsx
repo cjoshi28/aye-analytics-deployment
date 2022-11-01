@@ -6,7 +6,6 @@ import RegisterForm from '../../components/RegisterForm'
 export default function index() {
 
   async function signInHandler(name, email, password) {
-    console.log(name, email, password)
     await axios.post("http://localhost:3000/api/user/register", {
       name,
       email,
