@@ -59,6 +59,7 @@ export default function UserTable() {
         customStyles={customStyles}
         data={users}
         fixedHeader
+        className="-striped -highlight"
         />
     </div>
   )

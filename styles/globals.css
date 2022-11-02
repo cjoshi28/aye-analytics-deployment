@@ -27,7 +27,6 @@ a {
     background: #E9EEF5;
   }
 }
-
 .input-css{
   @apply  backdrop-blur bg-white/10 font-[Segoe-UI] mt-4 focus:ring-1 ring-[#E346D1] focus:ring-inset text-white text-base md:text-xl mid-xl:text-xl outline-none rounded p-2 w-10/12 lg:w-full sm:w-9/12 md:w-11/12;
 }
@@ -37,6 +36,9 @@ a {
   @apply lg:w-full w-7/12 sm:w-9/12 md:w-11/12 font-[Segoe-UI] text-base md:text-xl mid-xl:text-xl  cursor-pointer h-8 sm:h-10 rounded-lg bg-[#E346D1] text-white mt-6
 }
 
+.heading-forms, .heading-widgets{
+  @apply text-[22px] sm:text-[26px] md:text-[30px] xl:text-[38px] 2xl:text-[46px] font-[Segoe-UI-Bold] font-[700] md:font-[900]
+}
 @font-face {
   font-family: "Segoe-UI-Bold-Itlaic";
   src: url("../public/fonts/Segoe-UI-Bold-Italic.ttf");

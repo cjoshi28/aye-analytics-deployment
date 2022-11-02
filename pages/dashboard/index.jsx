@@ -8,18 +8,41 @@ import menu from "../../public/images/dashboard/Group 243.svg"
 import bell from "../../public/images/dashboard/Icon feather-bell.svg"
 import Reactangle from "../../public/images/dashboard/Rectangle 1719.svg"
 import Image from "next/image";
-import Stats from '../../components/dashboard/stats'
+import StatsWidget from '../../components/common/StatsWidget'
 import dynamic from 'next/dynamic';
-import Refreance from '../../Components/Dashboard/Refreance'
+import Reference from '../../components/dashboard/Reference'
 import UserTable from '../../components/dashboard/UserTable/UserTable'
-
 
 const Chart = dynamic(() => { return import('../../components/dashboard/Chart') }, { ssr: false });
 
-
-
-
 export default function index() {
+
+    const dashboardStats = [
+        {
+            heading:"Total Visitors",
+            value:"10K",
+            percentage:"-10",
+            icon:"",
+        },
+        {
+            heading:"Wallet Connected",
+            value:"120",
+            percentage:"20",
+            icon:"",
+        },
+        {
+            heading:"NFT Holders",
+            value:"1.2K",
+            percentage:"0.5",
+            icon:"",
+        },
+        {
+            heading:"Wallet Worth",
+            value:"2K",
+            percentage:"40",
+            icon:"",
+        }
+    ]
 
     return (
 
@@ -87,33 +110,46 @@ export default function index() {
 
                 <main className="p-6 sm:p-10 space-y-6 ">
                     <section className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-                        <Stats />
-                        <Stats />
-                        <Stats />
-                        <Stats />
+                        {
+                            dashboardStats && dashboardStats.map((stats,index) => {
+                                return (
+                                    <StatsWidget heading={stats.heading} value={stats.value} percentage={stats.percentage} icon={""} key={index} />
+                                )
+                            })
+                        }
+
                     </section>
-                    <section className='flex'>
-                        <Chart className="flex-1" />
-                        <div className=' rounded-3xl flex-1'>
-                            <div>
-                                <div className='mt-5 font-[Segoe-UI-Bold] first-letter  flex flex-row  justify-between '>
-                                    <span className='ml-4'>Recent Wallet Worth</span>
-                                    <div className='text-[#EE61C9]  items-end'>
-                                        <span className='mr-4'>View all</span>
-                                    </div>
+                    <section className='flex flex-col lg:flex-row lg:space-x-6'>
+                        <div className='basis-full lg:basis-1/2 rounded-lg bg-white'>
+                            <div className='mt-5 font-[Segoe-UI-Bold] first-letter  flex flex-row  justify-between '>
+                                <span className='ml-4'>Visitors</span>
+                                <div className='text-[#EE61C9]  items-end'>
+                                    <span className='mr-4'>
+                                        <select className="flat-select border-none bg-white rounded-xl text-xs font-semibold ">
+                                            <option className="text-xs font-semibold">05-10 May</option>
+                                            <option className="text-xs font-semibold" >16-25 Jun</option>
+                                            <option className="text-xs font-semibold" >20-30 Jul</option>
+                                        </select>                 
+                                    </span>
                                 </div>
-                                <UserTable />
                             </div>
+                            <Chart />
+                        </div>
+                        <div className='basis-full lg:basis-1/2 rounded-lg bg-white mt-6 lg:mt-0'>
+                            <div className='mt-5 font-[Segoe-UI-Bold] first-letter  flex flex-row  justify-between '>
+                                <span className='ml-4'>Recent Wallet Worth</span>
+                                <div className='text-[#EE61C9]  items-end'>
+                                    <span className='mr-4'>View all</span>
+                                </div>
+                            </div>
+                            <UserTable />
                         </div>
                     </section>
-                    <section>
-                        <Refreance />
+                    <section className='w-full'>
+                        <Reference />
                     </section>
-
-
-
-
                 </main>
+
             </div>
         </div >
 

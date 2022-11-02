@@ -1,10 +1,10 @@
 import React from 'react'
 
 import { FiArrowUp } from "react-icons/fi";
-export default function Refreance() {
+export default function Reference() {
     return (
-        <div className='  bg-[#FFFFFF]  md:inline-flex justify-center p-3 rounded-3xl'>
-            <div className='md:w-[20%] w-full h-full text-xl flex justify-center items-center font-bold p-5'>
+        <div className='bg-[#FFFFFF] w-full flex justify-between p-3 rounded-3xl'>
+            <div className='basis-3/12 h-full text-xl flex justify-center items-center font-bold p-5'>
                 <div className='font-[Segoe-UI-Bold]'>
                     <h1>Referrers</h1>
                     <div className='text-base mt-1 '>
@@ -24,7 +24,7 @@ export default function Refreance() {
                     </div>
                 </div>
             </div>
-            <div className='flex justify-center w-full flex-wrap '>
+            <div className='flex justify-end w-full flex-wrap '>
                 <Blogs />
                 <Blogs />
                 <Blogs />

@@ -4,7 +4,6 @@ import ReactApexChart from "react-apexcharts";
 export default function Chart() {
   const series = [
     {
-      name: "Visitors",
       data: [200, 100, 200, 300, 200, 300, 400, 300, 400, 500,],
 
     },
@@ -21,7 +20,7 @@ export default function Chart() {
       }
     },
     toolbar: {
-      show: true,
+      show: false,
     },
     dataLabels: {
       enabled: false,
@@ -29,14 +28,6 @@ export default function Chart() {
     colors: ["#EE61C9"],
     stroke: {
       curve: ["smooth", "straight", "stepline"],
-    },
-    title: {
-      text: "Visitors",
-      align: "left",
-      style: {
-        fontSize: '12px',
-        fontFamily: undefined
-      },
     },
     grid: {
       row: {
@@ -60,20 +51,12 @@ export default function Chart() {
     },
   };
   return (
-    <div
-      id="chart"
-      className="basis-1 md:w-6/12 sm:basis-1 lg:w-6/12 m-5 rounded-3xl">
-      <select
-        className="flat-select border-none bg-white rounded-xl text-xs font-semibold ">
-        <option className="text-xs font-semibold">05-10 May</option>
-        <option className="text-xs font-semibold" >16-25 Jun</option>
-        <option className="text-xs font-semibold" >20-30 Jul</option>
-      </select>
+    <div id="chart" className="basis-full">
       <ReactApexChart
         options={options}
         series={series}
         type="line"
-        className="sm:w-full md:w-full  lg:w-full"
+        className="sm:w-full md:w-full lg:w-full max-h-[300px]"
       />
     </div>
   );
