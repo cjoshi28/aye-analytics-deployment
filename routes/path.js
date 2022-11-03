@@ -1,4 +1,4 @@
 export const path = {
-    register : "http://localhost:3000/api/auth/register",
-    login: "http://localhost:3000/api/auth/login",
+    register : "http://localhost:5000/auth/register",
+    login: "http://localhost:5000/auth/login",
 }

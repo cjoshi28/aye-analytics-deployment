@@ -14,13 +14,19 @@ export default function Chart() {
       type: "area",
       line: "straight",
       colors: ["#EE61C9"],
-      background: ["#FFFFFF"],
+      background: ["#F8FAFC"],
       zoom: {
-        enabled: true,
+        enabled: false,
+      },
+      toolbar: {
+        show: true,
+        tools: {
+          download: false
+        }
       }
     },
     toolbar: {
-      show: false,
+      show: true,
     },
     dataLabels: {
       enabled: false,
@@ -29,11 +35,21 @@ export default function Chart() {
     stroke: {
       curve: ["smooth", "straight", "stepline"],
     },
+    title: {
+      align: "left",
+      style: {
+        fontSize: '12px',
+        fontFamily: undefined
+      },
+    },
     grid: {
       row: {
-        colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
+        colors: ["#F8FAFC"], // takes an array which will be repeated on columns
         opacity: 0.5,
       },
+      column:{
+        colors: ["#F8FAFC"],
+      }
     },
     xaxis: {
       categories: [

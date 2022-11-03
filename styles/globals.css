@@ -55,3 +55,7 @@ a {
   font-family: "Segoe-UI";
   src: url("../public/fonts/Segoe-UI.ttf");
 }
+@font-face {
+  font-family: "DM-sans";
+  src: url("../public/fonts/DMSans-Regular.ttf")
+}

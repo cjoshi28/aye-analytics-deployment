@@ -7,7 +7,8 @@ export default function UserTable() {
   const customStyles = {
     rows: {
         style: {
-            minHeight: '60px', // override the row height
+            minHeight: '78px', // override the row height
+            border: ''
         },
     },
     headCells: {
@@ -15,6 +16,8 @@ export default function UserTable() {
             color:"#7f8c8d",
             paddingLeft: '16px', // override the cell padding for head cells
             paddingRight: '2px',
+            background: "#F8FAFC",
+            fontFamily: "DM-sans"
         },
     },
     cells: {
@@ -22,7 +25,9 @@ export default function UserTable() {
             paddingLeft: '16px', // override the cell padding for data cells
             paddingRight: '2px',
             fontWeight: '700',
-            fontSize: '15px'
+            fontSize: '15px',
+            background: "#F8FAFC",
+            fontFamily: "DM-sans"
         },
     },
 };
@@ -32,24 +37,8 @@ export default function UserTable() {
         selector:(row) => row.value1,
     },
     {
-        name:"Eth Balance",
-        selector:(row) => row.value2,
-
-    },
-    {
-        name:"Ecr Token Worth",
-        selector:(row) => row.value3,
-
-    },
-    {
         name:"NFT Count",
         selector:(row) => row.value4,
-
-    },
-    {
-        name:"Chat",
-        selector:(row) => row.value5,
-
     }
   ]
   return (
@@ -59,7 +48,8 @@ export default function UserTable() {
         customStyles={customStyles}
         data={users}
         fixedHeader
-        className="-striped -highlight"
+        className="-striped UserTable -highlight"
+        
         />
     </div>
   )

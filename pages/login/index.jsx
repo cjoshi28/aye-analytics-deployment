@@ -8,7 +8,7 @@ import { path } from '../../routes/path'
 export default function index() {
 
   async function loginHandler(email, password) {
-    await axios.post( path.login , {
+    await axios.post(path.login, {
       email,
       password
     }).then((response) => {
@@ -46,7 +46,7 @@ export default function index() {
             <span className="text-center text-voilet-light-4 flex justify-center text-[10px] lg:text-[13px] md:text-[12px] sm:text-[12px] font-[Segoe-UI]">
               This is Protected by Google reCAPTCHA to ensure you're not a bot.
             </span>
-            <Link href="https://www.google.com" className="text-[#7C5BEE] flex justify-center text-sm whitespace-pre text-[15px] mid-xl:text-[17px] mt-1 mid-xl:mt-2 font-[Segoe-UI]"> Learn More</Link>
+            <Link passHref href="https://www.google.com" className="text-[#7C5BEE] flex justify-center text-sm whitespace-pre text-[15px] mid-xl:text-[17px] mt-1 mid-xl:mt-2 font-[Segoe-UI]"> Learn More</Link>
           </div>
         </div>
       </div>
