@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import Logo from '../../components/Logo'
 import RegisterForm from '../../components/RegisterForm'
+import { path } from '../../routes/path'
 
 export default function index() {
 

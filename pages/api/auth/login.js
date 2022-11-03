@@ -2,7 +2,6 @@ import connect_database from "../../../utils/database";
 import { userRegister } from "../../../model/userRegister";
 import { Decrypter } from "../../../library/helper";
 import Jwt from "jsonwebtoken";
-
 export default async function Login(req , res){
     const { method } = req;
     const { email , password } = req.body;

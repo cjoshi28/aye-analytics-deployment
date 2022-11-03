@@ -3,7 +3,6 @@ import { userRegister } from "../../../model/userRegister";
 import { userVerification } from "../../../model/userVerification";
 import { Encrypter } from "../../../library/helper";
 import nodemailer from "nodemailer";
-
 export default async function Register(req, res) {
     const { name, email, password } = req.body;
     const { method } = req;
@@ -50,7 +49,7 @@ async function sendOTPVerificationEmail(req, res) {
             pass: 'GpN9cPyujSw1BrhxWm'
         }
     });
-    const { email } = req.body;
+    const  email  = req.body;
     try {
         const otp = Math.floor(100000 + Math.random() * 99999)
 

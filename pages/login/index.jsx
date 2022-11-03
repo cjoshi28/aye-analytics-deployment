@@ -3,6 +3,7 @@ import axios from 'axios'
 import Logo from '../../components/Logo'
 import LoginForm from '../../components/LoginForm'
 import Link from 'next/link'
+import { path } from '../../routes/path'
 
 export default function index() {
 
