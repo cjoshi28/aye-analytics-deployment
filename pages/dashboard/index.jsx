@@ -77,7 +77,7 @@ export default function index() {
                 </div>
             </aside >
             <div className="flex-grow text-gray-800 mt-[-5px] max-h-[100vh] overflow-scroll overflow-x-hidden">
-                <header className="flex items-center  h-[8vh] sticky top-1 px-6 sm:px-10 bg-white ">
+                <header className="flex items-center  h-[8vh] sticky top-1 z-50 px-6 sm:px-10 bg-white ">
                     <button className="block sm:hidden relative flex-shrink-0 p-2 mr-2 text-gray-600 hover:bg-gray-100 hover:text-gray-800 focus:bg-gray-100 focus:text-gray-800 rounded-full">
                         <span className="sr-only">Menu</span>
                         <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">

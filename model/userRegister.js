@@ -1,4 +1,4 @@
-import { Schema , model , models} from "mongoose";
+import { Schema , model , models } from "mongoose";
 
 const userSchema = new Schema({
     name: {
@@ -13,6 +13,10 @@ const userSchema = new Schema({
     password : {
         type : String,
         require : true
+    },
+    isVerified : {
+        type : Boolean,
+        default : false
     }
 })
 

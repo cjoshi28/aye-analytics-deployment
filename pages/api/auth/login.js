@@ -21,6 +21,7 @@ export default async function Login(req , res){
                             message: "Login Successful",
                             name: databaseInfo.name,
                             email: databaseInfo.email,
+                            isVerified: databaseInfo.isVerified,
                             token: jwtToken,
                             status: true
                         })

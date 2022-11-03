@@ -1,6 +1,8 @@
 import connect_database from "../../../utils/database";
 import { userRegister } from "../../../model/userRegister";
+import { userVerification } from "../../../model/userVerification";
 import { Encrypter } from "../../../library/helper";
+import nodemailer from "nodemailer";
 
 export default async function Register(req , res){
     const { name , email , password } = req.body;
@@ -34,4 +36,39 @@ export default async function Register(req , res){
     }).catch(()=>{
         console.log("Cannot connect to database")
     })
+}
+
+
+async function sendOTPVerificationEmail(req , res){
+    let transporter = nodemailer.createTransport({
+        host: "",
+        auth: {
+            user: process.env.AUTH_EMAIL,
+            pass: process.env.AUTH_PASSWORD
+        }
+    })
+    const { email } = req.body;
+    try{
+        const otp = Math.floor(100000 + Math.random() * 99999)
+
+        const mailOptions = {
+            from: process.env.AUTH_EMAIL,
+            to: email,
+            subject: "Verify your Email",
+            html: `<p>Enter <b>${otp}</b> in the app to verify your Email Address and complete the Registration process.</p><p>This OTP <b>Expires in 10 Minutes</b></p>`
+        }
+
+        const encryptedOTP = Encrypter(otp)
+
+        const verificationDetails = await userVerification({
+            email: email,
+            otp: encryptedOTP,
+            createdAt: Date.now(),
+            expiresAt: Date.now() + 600000
+        })
+
+        verificationDetails.save()
+    }catch(error){
+
+    }
 }

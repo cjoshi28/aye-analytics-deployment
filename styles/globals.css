@@ -37,7 +37,7 @@ a {
 }
 
 .heading-forms, .heading-widgets{
-  @apply text-[22px] sm:text-[26px] md:text-[30px] xl:text-[38px] 2xl:text-[46px] font-[Segoe-UI-Bold] font-[700] md:font-[900]
+  @apply text-[20px] sm:text-[26px] md:text-[25px] xl:text-[28px] 2xl:text-[36px] font-[Segoe-UI-Bold] font-[700] 
 }
 @font-face {
   font-family: "Segoe-UI-Bold-Itlaic";

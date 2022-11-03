@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRef } from 'react';
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function LoginForm({ login }) {
 
@@ -84,12 +85,12 @@ export default function LoginForm({ login }) {
         <div>
           <input className='input-css' placeholder='Email' type="text" ref={email} id="" />
         </div>
-        <div className=' text-left ml-8 lg:ml-0 sm:ml-16 text-red-500 text-base sm:text-xl font-[Segoe-UI] md:ml-5 ' ref={emailError}></div>
+        <div className='text-left ml-9 sm:ml-[90px] md:ml-[25px] lg:ml-0  text-red-500 text-base sm:text-xl lg:text-lg xl:text-xl font-[Segoe-UI] ' ref={emailError}></div>
         <div>
           <input className='input-css' placeholder='Password' type="password" ref={password} id="" />
-          <div className='text-left text-red-500 ml-8 sm:ml-16 lg:ml-0 font-[Segoe-UI] md:ml-5 text-base sm:text-xl' ref={passwordError}></div>
+          <div className='text-left text-red-500 ml-9 sm:ml-[90px] md:ml-[25px] lg:ml-0  font-[Segoe-UI]  text-base sm:text-xl lg:text-lg xl:text-xl' ref={passwordError}></div>
         </div>
-        <div className='md:flex md:justify-between sm:flex sm:justify-between lg:flex lg:justify-between px-14 md:px-6 xl:px-2 mt-4'>
+        <div className='md:flex md:justify-between sm:flex sm:justify-between lg:flex lg:justify-between px-14 sm:px-24 md:px-4 xl:px-2 mt-4'>
           <div className="md:flex md:items-center">
             <input onChange={check} type="checkbox" className="mid-xl:w-4 mid-xl:h-4 accent-[#E346D1] border-none rounded"
             />
@@ -98,7 +99,7 @@ export default function LoginForm({ login }) {
             </label>
           </div>
           <div>
-            <span className="text-[#7C5BEE] font-[Segoe-UI]">Forgot Password?</span>
+            <Link href="https://www.google.com" className="text-[#7C5BEE] hover:text-[#6348c4] font-[Segoe-UI]">Forgot Password?</Link>
           </div>
         </div>
         <div>

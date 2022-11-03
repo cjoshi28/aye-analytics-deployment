@@ -26,9 +26,9 @@ export default function index() {
           </div>
         </div>
 
-        <div className='md:basis-2/3 lg:basis-1/2 py-4 md:py-2 mid-xl:py-12  lg:mt-0 flex justify-center items-center'>
-          <div className='mx-8 sm:mx-0 w-full md:w-6/12 lg:w-10/12 h-full pb-12 md:pb-0 flex justify-center items-center flex-col'>
-            <h2 className='text-white flex justify-center m-8  heading-forms'>Create New Account</h2>
+        <div className='md:basis-2/3 lg:basis-1/2 py-4 md:py-2 mid-xl:py-12 flex justify-center md:items-center lg:mt-0'>
+          <div className='w-full md:w-6/12 lg:w-8/12 h-full flex justify-center flex-col pb-12 md:pb-12 lg:pb-0 xl:pb-0'>
+            <h2 className='text-white flex justify-center m-8 heading-forms'>Create New Account</h2>
             <RegisterForm signIn={signInHandler} />
           </div>
         </div>
