@@ -6,7 +6,7 @@ import RegisterForm from '../../components/RegisterForm'
 export default function index() {
 
   async function signInHandler(name, email, password) {
-    await axios.post("http://localhost:3000/api/user/register", {
+    await axios.post( path.register , {
       name,
       email,
       password
@@ -16,7 +16,6 @@ export default function index() {
       console.log(error)
     })
   }
-
   return (
     <>
       <div className="min-h-screen bg-cover bg-[url('/images/mobileResponsive.png')] flex flex-col lg:flex-row md:bg-cover md:bg-[url('/images/MicrosoftTeams-image.png')]">

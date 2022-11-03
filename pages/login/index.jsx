@@ -7,7 +7,7 @@ import Link from 'next/link'
 export default function index() {
 
   async function loginHandler(email, password) {
-    await axios.post("http://localhost:3000/api/user/login", {
+    await axios.post( path.login , {
       email,
       password
     }).then((response) => {
@@ -16,6 +16,7 @@ export default function index() {
       console.log(error)
     })
   }
+
 
   return (
     <div className="min-h-screen bg-cover bg-[url('/images/mobileResponsive.png')] flex flex-col lg:flex-row md:bg-cover md:bg-[url('/images/MicrosoftTeams-image.png')]">
