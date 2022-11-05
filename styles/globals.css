@@ -1,6 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Segoe-UI-Bold-Itlaic";
+  src: url("../public/fonts/Segoe-UI-Bold-Italic.ttf");
+}
+@font-face {
+  font-family: "Segoe-UI-Bold";
+  src: url("../public/fonts/Segoe-UI-Bold.ttf");
+}
+@font-face {
+  font-family: "Segoe-UI-Italic";
+  src: url("../public/fonts/Segoe-UI-Italic.ttf");
+}
+@font-face {
+  font-family: "Segoe-UI";
+  src: url("../public/fonts/Segoe-UI.ttf");
+}
+@font-face {
+  font-family: "DM-sans";
+  src: url("../public/fonts/DMSans-Regular.ttf")
+}
+
+
 html,
 body {
   padding: 0;
@@ -24,38 +47,39 @@ a {
   }
   body {
     color: white;
-    background: #E9EEF5;
   }
 }
 .input-css{
-  @apply  backdrop-blur bg-white/10 font-[Segoe-UI] mt-4 focus:ring-1 ring-[#E346D1] focus:ring-inset text-white text-base md:text-xl mid-xl:text-xl outline-none rounded p-2 w-10/12 lg:w-full sm:w-9/12 md:w-11/12;
+  @apply  backdrop-blur bg-white/10 font-[DM-sans] mt-4 focus:ring-1 ring-voilet-light-5 focus:ring-inset text-white text-base md:text-xl mid-xl:text-xl outline-none rounded p-2 w-10/12 lg:w-full sm:w-9/12 md:w-11/12;
 }
-
-
 .btn-css{
-  @apply lg:w-full w-7/12 sm:w-9/12 md:w-11/12 font-[Segoe-UI] text-base md:text-xl mid-xl:text-xl  cursor-pointer h-8 sm:h-10 rounded-lg bg-[#E346D1] text-white mt-6
+  @apply lg:w-full w-7/12 sm:w-9/12 md:w-11/12 font-[DM-sans] text-base md:text-xl mid-xl:text-xl cursor-pointer h-8 sm:h-10 rounded-lg 
+  bg-voilet-light-5 text-white mt-6
 }
 
-.heading-forms, .heading-widgets{
-  @apply text-[20px] sm:text-[26px] md:text-[25px] xl:text-[28px] 2xl:text-[36px] font-[Segoe-UI-Bold] font-[700] 
+.heading-forms{
+  @apply text-[20px] sm:text-[26px] md:text-[25px] xl:text-[28px] 2xl:text-[36px] font-[DM-sans] font-[700] 
 }
-@font-face {
-  font-family: "Segoe-UI-Bold-Itlaic";
-  src: url("../public/fonts/Segoe-UI-Bold-Italic.ttf");
+
+.heading-widgets{
+  @apply text-[16px] font-[DM-sans] font-[700] 
 }
-@font-face {
-  font-family: "Segoe-UI-Bold";
-  src: url("../public/fonts/Segoe-UI-Bold.ttf");
+.subheading-widgets{
+  @apply text-[15px] font-[DM-sans] font-[400] 
 }
-@font-face {
-  font-family: "Segoe-UI-Italic";
-  src: url("../public/fonts/Segoe-UI-Italic.ttf");
+
+.WalletTable table{
+  @apply w-full
 }
-@font-face {
-  font-family: "Segoe-UI";
-  src: url("../public/fonts/Segoe-UI.ttf");
+.WalletTable table td{
+  @apply !py-2
 }
-@font-face {
-  font-family: "DM-sans";
-  src: url("../public/fonts/DMSans-Regular.ttf")
+.WalletTable table tr th, .WalletTable table tr td{
+  @apply text-left
+}
+.WalletTable table th:last-child, .WalletTable table td:last-child{
+  @apply text-right
+}
+.WalletTable th{
+  @apply text-gray-500 font-medium text-xs lg:text-sm
 }

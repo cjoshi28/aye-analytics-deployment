@@ -7,7 +7,7 @@ import { path } from '../../routes/path'
 export default function index() {
 
   async function signInHandler(name, email, password) {
-    await axios.post( path.register , {
+    await axios.post(path.register, {
       name,
       email,
       password

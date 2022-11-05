@@ -1,27 +1,27 @@
 
 const Details = [
     {
-        value1:" 0x678675dc",
-        value4:" 2000 $",
+        walletAddress:"0x678675dc",
+        walletWorth:"2000",
     },
     {
-        value1:" 0x683943ed",
-        value4:" 0.5 $",
+        walletAddress:"0x683943ed",
+        walletWorth:"0.5",
         
     },
     {
-        value1:" 0x683943ed",
-        value4:" 53,000 $",
+        walletAddress:"0x683943ed",
+        walletWorth:"53,000",
     
     },
     {
-        value1:" 0x683943ed",
-        value4:" 2400 $",
+        walletAddress:"0x683943ed",
+        walletWorth:"2400",
         
     },
     {
-        value1:" 0x683943ed",
-        value4:" 500 $",
+        walletAddress:"0x683943ed",
+        walletWorth:"500",
         
     }
 ]

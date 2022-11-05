@@ -5,12 +5,12 @@ export default function StatsWidget({ heading,value,percentage,icon }) {
     if(percentage<0) color = false;
     
     return (
-        <div className="flex items-start justify-between p-6 bg-white shadow rounded-lg">
+        <div className="flex items-start justify-between p-4 bg-white shadow rounded-lg">
             <div>
-                <span className="text-[16px] sm:text-[18px] xl:text-[18px] mid-xl:text-[20px] 3xl:text-[24px] font-[DM-sans] font-medium">{heading || ""}</span>
+                <span className="text-[15px] sm:text-[16px] xl:text-[16px] mid-xl:text-[20px] 3xl:text-[24px] font-[DM-sans] font-normal">{heading || ""}</span>
                 <div className='flex items-baseline space-x-2 mt-4'> 
-                    <span className="block text-[16px] font-[DM-sans] sm:text-[18px] md:text-[22px] xl:text-[28px] 3xl:text-[32px] text-black font-bold ">{value}</span> 
-                    <span className={ `${(color) ? "text-[#53D0A4]" : "text-[#ff5724]"} text-[14px] font-[DM-sans] lg:text-[18px]`}>{(color)?"+":""}{percentage}% </span>
+                    <span className="block text-[16px] font-[DM-sans] sm:text-[16px] md:text-[20px] xl:text-[22px] 3xl:text-[26px] text-black font-bold ">{value}</span> 
+                    <span className={ `${(color) ? "text-success" : "text-danger"} text-[14px] font-[DM-sans] lg:text-[16px]`}>{(color)?"+":""}{percentage}% </span>
                 </div>
             </div>
             <div className="inline-flex flex-shrink-0 items-center justify-center h-10 w-10 text-purple-600 bg-purple-100 rounded-lg">

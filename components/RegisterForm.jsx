@@ -20,8 +20,8 @@ export default function RegisterForm({ signIn }) {
   const nameError = useRef();
   const cpasswordError = useRef();
 
-  const inputCss = "backdrop-blur bg-white/10 font-[Segoe-UI] mt-4 focus:ring-1 ring-[#E346D1] focus:ring-inset text-white text-base md:text-xl mid-xl:text-xl outline-none rounded p-2 w-10/12 lg:w-full sm:w-9/12 md:w-11/12"
-  const validCss = "backdrop-blur  bg-white/10 font-[Segoe-UI] mt-4 ring-inset ring-1 ring-red-500  text-white text-base md:text-xl  outline-none rounded p-2 w-10/12 lg:w-full sm:w-9/12 md:w-11/12"
+  const inputCss = "backdrop-blur bg-white/10 font-[DM-sans] mt-4 focus:ring-1 ring-voilet-light-5 focus:ring-inset text-white text-base md:text-xl mid-xl:text-xl outline-none rounded p-2 w-10/12 lg:w-full sm:w-9/12 md:w-11/12"
+  const validCss = "backdrop-blur  bg-white/10 font-[DM-sans] mt-4 ring-inset ring-1 ring-red-500 text-white text-base md:text-xl  outline-none rounded p-2 w-10/12 lg:w-full sm:w-9/12 md:w-11/12"
 
   const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i;
   const passRegex = /^([a-zA-Z0-9@*#]{8,15})$/i;
@@ -148,27 +148,27 @@ export default function RegisterForm({ signIn }) {
         <div>
           <input className='input-css' placeholder='Full Name' type="text" ref={name} id="" />
         </div>
-        <div className=' text-left ml-9 sm:ml-[90px] md:ml-[25px] lg:ml-0  text-red-500 text-base sm:text-xl font-[Segoe-UI] ' ref={nameError}></div>
+        <div className=' text-left ml-9 sm:ml-[90px] md:ml-[25px] lg:ml-0  text-red-500 text-base sm:text-xl font-[DM-sans] ' ref={nameError}></div>
         <div>
           <input className='input-css' placeholder='Email' type="text" ref={email} id="" />
-          <div className='text-left text-red-500 ml-9 sm:ml-[90px] md:ml-[25px] lg:ml-0  font-[Segoe-UI]  text-base sm:text-xl' ref={emailError}></div>
+          <div className='text-left text-red-500 ml-9 sm:ml-[90px] md:ml-[25px] lg:ml-0  font-[DM-sans]  text-base sm:text-xl' ref={emailError}></div>
         </div>
         <div>
           <input className='input-css' placeholder='Password' type="password" ref={password} id="" />
-          <div className='text-left text-red-500 ml-9 sm:ml-[90px] md:ml-[25px] lg:ml-0 font-[Segoe-UI]  text-base sm:text-xl' ref={passwordError}></div>
+          <div className='text-left text-red-500 ml-9 sm:ml-[90px] md:ml-[25px] lg:ml-0 font-[DM-sans]  text-base sm:text-xl' ref={passwordError}></div>
         </div>
         <div>
           <input className='input-css' placeholder='Confirm-Password' type="password" ref={cpassword} id="" />
-          <div className='text-left text-red-500 ml-9 sm:ml-[90px] md:ml-[25px] lg:ml-0  font-[Segoe-UI] text-base sm:text-xl' ref={cpasswordError}></div>
+          <div className='text-left text-red-500 ml-9 sm:ml-[90px] md:ml-[25px] lg:ml-0  font-[DM-sans] text-base sm:text-xl' ref={cpasswordError}></div>
         </div>
         <div className='md:flex md:justify-between sm:flex sm:justify-between lg:flex lg:justify-between px-14 md:px-6 xl:px-2 mt-4'>
           <div className="w-full mid-xl:flex mid-xl:items-center">
-            <input onChange={check} type="checkbox" className="mid-xl:w-4 mid-xl:h-4 accent-[#E346D1] rounded"
+            <input onChange={check} type="checkbox" className="mid-xl:w-4 mid-xl:h-4 accent-voilet-light-5 rounded"
             />
-            <label className="ml-2 text-sm lg:text-sm 2xl:text-base font-[Segoe-UI] text-voilet-light-3">
+            <label className="ml-2 text-sm lg:text-sm  font-[DM-sans] text-voilet-light-3">
               By creating an account, I agree to Aye Analytics <br />
             </label>
-            <Link href="https://www.google.com" className="text-voilet-light-4 hover:text-voilet-light-2 font-[Segoe-UI-Bold] text-base lg:text-sm 2xl:text-base whitespace-pre"> Terms of Service
+            <Link href="https://www.google.com" className="text-voilet-light-4 hover:text-voilet-light-2 font-[DM-sans] text-base lg:text-sm 2xl:text-base whitespace-pre"> Terms of Service
             </Link>
           </div>
 

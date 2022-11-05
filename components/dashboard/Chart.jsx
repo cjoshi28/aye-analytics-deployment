@@ -12,9 +12,17 @@ export default function Chart() {
     chart: {
       height: 350,
       type: "area",
+      dropShadow: {
+        enabled: !0,
+        color: "#1E202C",
+        top: 24,
+        left: 6,
+        blur: 8,
+        opacity: .1
+      },
       line: "straight",
       colors: ["#EE61C9"],
-      background: ["#F8FAFC"],
+      background: ["#FFFFFF"],
       zoom: {
         enabled: false,
       },
@@ -23,7 +31,7 @@ export default function Chart() {
         tools: {
           download: false
         }
-      }
+      },
     },
     toolbar: {
       show: true,
