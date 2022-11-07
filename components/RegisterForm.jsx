@@ -26,121 +26,181 @@ export default function RegisterForm({ signIn }) {
   const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i;
   const passRegex = /^([a-zA-Z0-9@*#]{8,15})$/i;
   const nameRegex = /^[A-Za-z][A-Za-z0-9_]{3,29}$/i;
+
   async function submitHandler(event) {
     event.preventDefault();
-    if (name.current.value !== "" && email.current.value !== "" && password.current.value !== "" && cpassword.current.value !== "") {
-      name.current.className = inputCss
-      nameError.current.innerHTML = ""
-      email.current.className = inputCss
-      emailError.current.innerHTML = ""
-      password.current.className = inputCss
-      passwordError.current.innerHTML = ""
-      cpassword.current.className = inputCss
-      cpassword.current.innerHTML = ""
-      password.current.className = inputCss
-      passwordError.current.innerHTML = ""
-      if (!passRegex.test(password.current.value) && password.current.value === cpassword.current.value) {
-        cpassword.current.className = validCss
-        cpasswordError.current.innerHTML = ""
-      }
-      if (passRegex.test(password.current.value) && emailRegex.test(email.current.value) && password.current.value === cpassword.current.value) {
-        signIn(name.current.value, email.current.value, password.current.value)
-        name.current.innerHTML = ""
-        email.current.innerHTML = ""
-        password.current.innerHTML = ""
-        cpassword.current.innerHTML = ""
-        cpassword.current.className = inputCss
-        cpasswordError.current.innerHTML = ""
-      } else {
 
-        if (!nameRegex.test(name.current.value)) {
-          name.current.className = validCss
-          nameError.current.innerHTML = "More then 3 charaters"
-        }
+    nameError.current.innerHTML = ""
+    emailError.current.innerHTML = ""
+    passwordError.current.innerHTML = ""
+    cpasswordError.current.innerHTML = ""
 
-        if (!emailRegex.test(email.current.value)) {
-          email.current.className = validCss
-          emailError.current.innerHTML = "Email is not Valid"
-        }
+    name.current.className = inputCss
+    email.current.className = inputCss
+    password.current.className = inputCss
+    cpassword.current.className = inputCss
+    let isError = false;
 
-        if (!passRegex.test(password.current.value)) {
-          password.current.className = validCss
-          passwordError.current.innerHTML = "Must include [{A,Z},{a,z},{0,9},{!@#$%^&}]"
-        }
-
-        if (password.current.value !== cpassword.current.value) {
-          cpassword.current.className = validCss
-          cpasswordError.current.innerHTML = "Password doesn't match"
-        }
-
-      }
-    } else if (name.current.value === "" || email.current.value === "" || password.current.value === "" || cpassword.current.value === "") {
-
-      if (name.current.value === "") {
+    if(name.current.value !== "")
+    {
+      if(!nameRegex.test(name.current.value)) {
         name.current.className = validCss
-        nameError.current.innerHTML = "Name is Required"
-      } else if (!nameRegex.test(name.current.value)) {
-        name.current.className = validCss
-        nameError.current.innerHTML = "More then 3 charaters"
-      } else {
-        name.current.className = inputCss
-        nameError.current.innerHTML = ""
+        nameError.current.innerHTML = "Please Enter Name"
+        isError=true
       }
+    }else{
+      name.current.className = validCss
+      nameError.current.innerHTML = "More then 3 charaters"
+      isError=true
+    }
 
-      if (email.current.value === "") {
-        email.current.className = validCss
-        emailError.current.innerHTML = "Email is Required"
-      } else if (!emailRegex.test(email.current.value)) {
+    if(email.current.value !== ""){
+      if (!emailRegex.test(email.current.value)) {
         email.current.className = validCss
         emailError.current.innerHTML = "Email is not Valid"
-      } else {
-        email.current.className = inputCss
-        emailError.current.innerHTML = ""
+        isError = true;
       }
+    }else{
+        email.current.className = validCss
+        emailError.current.innerHTML = "Please Enter Email"
+        isError = true;
+    }
 
-      if (password.current.value === "" || cpassword.current.value === "") {
-        if (password.current.value === "") {
-          password.current.className = validCss
-          passwordError.current.innerHTML = "Password is Required"
-        } else if (!passRegex.test(password.current.value)) {
-          password.current.className = validCss
-          passwordError.current.innerHTML = "Must include [{A,Z},{a,z},{0,9},{!@#$%^&}]"
-        } else if (password.current.value !== cpassword.current.value) {
-          cpassword.current.className = validCss
-          cpasswordError.current.innerHTML = "Password doesn't match"
-        } else {
-          password.current.className = inputCss
-          passwordError.current.innerHTML = ""
-        }
 
-        if (cpassword.current.value === "") {
-          cpassword.current.className = validCss
-          cpasswordError.current.innerHTML = "This cannot be empty"
-        } else if (password.current.value !== cpassword.current.value) {
-          cpassword.current.className = validCss
-          cpasswordError.current.innerHTML = "Password doesn't match"
-        } else {
-          cpassword.current.className = inputCss
-          cpassword.current.innerHTML = ""
-        }
-      } else {
-        if (!passRegex.test(password.current.value)) {
-          password.current.className = validCss
-          passwordError.current.innerHTML = "Must include [{A,Z},{a,z},{0,9},{!@#$%^&}]"
-        } else {
-          password.current.className = inputCss
-          passwordError.current.innerHTML = ""
-        }
-
+    if(password.current.value !== ""){
+      if (!passRegex.test(password.current.value)) {
+        password.current.className = validCss
+        passwordError.current.innerHTML = "Must include [{A,Z},{a,z},{0,9},{!@#$%^&}]"
+        isError = true;
+      }
+      if(cpassword.current.value !== ""){
         if (password.current.value !== cpassword.current.value) {
           cpassword.current.className = validCss
           cpasswordError.current.innerHTML = "Password doesn't match"
-        } else {
-          cpassword.current.className = inputCss
-          cpasswordError.current.innerHTML = ""
+          isError = true
         }
+      }else{
+        cpassword.current.className = validCss
+        cpasswordError.current.innerHTML = "Plese Enter Password Again"
+        isError = true;
       }
+    }else{
+      password.current.className = validCss
+      passwordError.current.innerHTML = "Must include [{A,Z},{a,z},{0,9},{!@#$%^&}]"
+      isError = true;
     }
+
+
+
+    if(isError==false){
+      signIn(name.current.value, email.current.value, password.current.value)
+    }
+    // if (name.current.value !== "" && email.current.value !== "" && password.current.value !== "" && cpassword.current.value !== "") {
+
+
+      
+    //   if (!passRegex.test(password.current.value) && password.current.value === cpassword.current.value) {
+    //     cpassword.current.className = validCss
+    //     cpasswordError.current.innerHTML = ""
+    //   }
+    //   if (passRegex.test(password.current.value) && emailRegex.test(email.current.value) && password.current.value === cpassword.current.value) {
+    //     signIn(name.current.value, email.current.value, password.current.value)
+    //     name.current.innerHTML = ""
+    //     email.current.innerHTML = ""
+    //     password.current.innerHTML = ""
+    //     cpassword.current.innerHTML = ""
+    //     cpassword.current.className = inputCss
+    //     cpasswordError.current.innerHTML = ""
+    //   } else {
+
+    //     if (!nameRegex.test(name.current.value)) {
+    //       name.current.className = validCss
+    //       nameError.current.innerHTML = "More then 3 charaters"
+    //     }
+
+    //     if (!emailRegex.test(email.current.value)) {
+    //       email.current.className = validCss
+    //       emailError.current.innerHTML = "Email is not Valid"
+    //     }
+
+    //     if (!passRegex.test(password.current.value)) {
+    //       password.current.className = validCss
+    //       passwordError.current.innerHTML = "Must include [{A,Z},{a,z},{0,9},{!@#$%^&}]"
+    //     }
+
+    //     if (password.current.value !== cpassword.current.value) {
+    //       cpassword.current.className = validCss
+    //       cpasswordError.current.innerHTML = "Password doesn't match"
+    //     }
+
+    //   }
+    // } else if (name.current.value === "" || email.current.value === "" || password.current.value === "" || cpassword.current.value === "") {
+
+    //   if (name.current.value === "") {
+    //     name.current.className = validCss
+    //     nameError.current.innerHTML = "Name is Required"
+    //   } else if (!nameRegex.test(name.current.value)) {
+    //     name.current.className = validCss
+    //     nameError.current.innerHTML = "More then 3 charaters"
+    //   } else {
+    //     name.current.className = inputCss
+    //     nameError.current.innerHTML = ""
+    //   }
+
+    //   if (email.current.value === "") {
+    //     email.current.className = validCss
+    //     emailError.current.innerHTML = "Email is Required"
+    //   } else if (!emailRegex.test(email.current.value)) {
+    //     email.current.className = validCss
+    //     emailError.current.innerHTML = "Email is not Valid"
+    //   } else {
+    //     email.current.className = inputCss
+    //     emailError.current.innerHTML = ""
+    //   }
+
+    //   if (password.current.value === "" || cpassword.current.value === "") {
+    //     if (password.current.value === "") {
+    //       password.current.className = validCss
+    //       passwordError.current.innerHTML = "Password is Required"
+    //     } else if (!passRegex.test(password.current.value)) {
+    //       password.current.className = validCss
+    //       passwordError.current.innerHTML = "Must include [{A,Z},{a,z},{0,9},{!@#$%^&}]"
+    //     } else if (password.current.value !== cpassword.current.value) {
+    //       cpassword.current.className = validCss
+    //       cpasswordError.current.innerHTML = "Password doesn't match"
+    //     } else {
+    //       password.current.className = inputCss
+    //       passwordError.current.innerHTML = ""
+    //     }
+
+    //     if (cpassword.current.value === "") {
+    //       cpassword.current.className = validCss
+    //       cpasswordError.current.innerHTML = "This cannot be empty"
+    //     } else if (password.current.value !== cpassword.current.value) {
+    //       cpassword.current.className = validCss
+    //       cpasswordError.current.innerHTML = "Password doesn't match"
+    //     } else {
+    //       cpassword.current.className = inputCss
+    //       cpassword.current.innerHTML = ""
+    //     }
+    //   } else {
+    //     if (!passRegex.test(password.current.value)) {
+    //       password.current.className = validCss
+    //       passwordError.current.innerHTML = "Must include [{A,Z},{a,z},{0,9},{!@#$%^&}]"
+    //     } else {
+    //       password.current.className = inputCss
+    //       passwordError.current.innerHTML = ""
+    //     }
+
+    //     if (password.current.value !== cpassword.current.value) {
+    //       cpassword.current.className = validCss
+    //       cpasswordError.current.innerHTML = "Password doesn't match"
+    //     } else {
+    //       cpassword.current.className = inputCss
+    //       cpasswordError.current.innerHTML = ""
+    //     }
+    //   }
+    // }
   }
   return (
     <div className='text-center '>

@@ -25,10 +25,13 @@ export default function LoginForm({ login }) {
     event.preventDefault();
 
     if (email.current.value !== "" && password.current.value !== "") {
+      
       email.current.className = inputCss
-      emailError.current.innerHTML = ""
       password.current.className = inputCss
+
+      emailError.current.innerHTML = ""
       passwordError.current.innerHTML = ""
+
       if (passRegex.test(password.current.value) && emailRegex.test(email.current.value)) {
         login(email.current.value, password.current.value)
         email.current.innerHTML = ""
