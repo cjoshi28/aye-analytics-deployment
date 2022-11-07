@@ -17,7 +17,7 @@ export default function index() {
         name: response?.data?.name,
         token: response?.data?.token
       }
-      localStorage.setItem("Session" , JSON.stringify(data))
+      localStorage.setItem("Session", JSON.stringify(data))
     }).catch((error) => {
       console.log(error)
     })
@@ -37,7 +37,7 @@ export default function index() {
           <div className='my-5' >
             <fieldset className="border border-b-0 border-r-0 border-l-0  sm:m-6 md:m-6 lg:m-6 border-voilet-light-2">
               <legend className="text-xl text-center px-3 font-[DM-sans] text-voilet-light-3">
-                Or
+                hello
               </legend>
             </fieldset>
           </div>
