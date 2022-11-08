@@ -4,6 +4,7 @@ import Table from '../../common/Table'
 
 export default function UserTable() {
   const [users, setUser] = useState(Details)
+
   const columns = [{
     Header: 'Wallet Address',
     accessor: 'walletAddress' // String-based value accessors!

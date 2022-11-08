@@ -2,8 +2,6 @@ import React from 'react'
 import StatsWidget from '../../components/common/StatsWidget'
 import dynamic from 'next/dynamic';
 import Referrers from '../../components/dashboard/Referrers'
-import Sidebar from '../../components/dashboard/Sidebar';
-import Header from '../../components/dashboard/Header';
 import UserTable from '../../components/dashboard/UserTable/UserTable';
 
 const Chart = dynamic(() => { return import('../../components/dashboard/Chart') }, { ssr: false });
@@ -15,25 +13,25 @@ export default function index() {
       heading: "Total Visitors",
       value: "10K",
       percentage: "-10",
-      icon: "",
+      icon: "users",
     },
     {
       heading: "Wallet Connected",
       value: "120",
       percentage: "20",
-      icon: "",
+      icon: "walletCheck",
     },
     {
       heading: "NFT Holders",
       value: "1.2K",
       percentage: "0.5",
-      icon: "",
+      icon: "secureUser",
     },
     {
       heading: "Wallet Worth",
       value: "2K",
       percentage: "40",
-      icon: "",
+      icon: "walletDollar",
     }
   ]
   return (
@@ -42,10 +40,13 @@ export default function index() {
         {
           dashboardStats && dashboardStats.map((stats, index) => {
             return (
-              <StatsWidget heading={stats.heading} value={stats.value} percentage={stats.percentage} icon={""} key={index} />
+              <StatsWidget heading={stats.heading} value={stats.value} percentage={stats.percentage} icon={stats.icon} key={index} />
+
             )
           })
         }
+
+
       </section>
       <section className='flex flex-col lg:flex-row lg:space-x-6'>
         <div className='basis-full lg:basis-1/2 rounded-lg bg-white'>
