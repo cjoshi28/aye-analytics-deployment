@@ -5,7 +5,6 @@ import { useRef } from 'react';
 
 export default function RegisterForm({ signIn }) {
 
-
   const email = useRef();
   const password = useRef();
   const name = useRef();
@@ -20,7 +19,7 @@ export default function RegisterForm({ signIn }) {
 
   const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i;
   const passRegex = /^([a-zA-Z0-9@*#]{8,15})$/i;
-  const nameRegex = /^[A-Za-z][A-Za-z0-9_]{3,29}$/i;
+  const nameRegex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]){3,29}$/i;
 
   async function submitHandler(event) {
     event.preventDefault();
@@ -40,7 +39,7 @@ export default function RegisterForm({ signIn }) {
     if (name.current.value !== "") {
       if (!nameRegex.test(name.current.value)) {
         name.current.className = validCss
-        nameError.current.innerHTML = "More then 3 charaters"
+        nameError.current.innerHTML = "More than 3 characters"
         isError = true
       }
     } else {
@@ -95,18 +94,18 @@ export default function RegisterForm({ signIn }) {
         <div>
           <input className='input-css' placeholder='Full Name' type="text" ref={name} id="" />
         </div>
-        <div className=' text-left ml-9 sm:ml-[90px] md:ml-[25px] lg:ml-0  text-red-500 text-base sm:text-xl font-[DM-sans] ' ref={nameError}></div>
+        <div className=' text-left text-red-500  mx-8 sm:mx-0 pl-[10px] sm:pl-[90px] md:pl-[0px]  md:ml-[25px] lg:ml-1  font-[DM-sans]  text-base sm:text-lg' ref={nameError}></div>
         <div>
           <input className='input-css' placeholder='Email' type="text" ref={email} id="" />
-          <div className='text-left text-red-500 ml-9 sm:ml-[90px] md:ml-[25px] lg:ml-0  font-[DM-sans]  text-base sm:text-xl' ref={emailError}></div>
+          <div className='text-left text-red-500  mx-8 sm:mx-0 pl-[10px] sm:pl-[90px] md:pl-[0px]  md:ml-[25px] lg:ml-1  font-[DM-sans]  text-base sm:text-lg' ref={emailError}></div>
         </div>
         <div>
           <input className='input-css' placeholder='Password' type="password" ref={password} id="" />
-          <div className='text-left text-red-500 ml-9 sm:ml-[90px] md:ml-[25px] lg:ml-0 font-[DM-sans]  text-base sm:text-xl' ref={passwordError}></div>
+          <div className='text-left text-red-500  mx-8 sm:mx-0 pl-[10px] sm:pl-[90px] md:pl-[0px]  md:ml-[25px] lg:ml-1  font-[DM-sans]  text-base sm:text-lg' ref={passwordError}></div>
         </div>
         <div>
           <input className='input-css' placeholder='Confirm-Password' type="password" ref={cpassword} id="" />
-          <div className='text-left text-red-500 ml-9 sm:ml-[90px] md:ml-[25px] lg:ml-0  font-[DM-sans] text-base sm:text-xl' ref={cpasswordError}></div>
+          <div className='text-left text-red-500  mx-8 sm:mx-0 pl-[10px] sm:pl-[90px] md:pl-[0px]  md:ml-[25px] lg:ml-1  font-[DM-sans]  text-base sm:text-lg' ref={cpasswordError}></div>
         </div>
         <div className='md:flex md:justify-between sm:flex sm:justify-between lg:flex lg:justify-between px-14 md:px-6 xl:px-2 mt-4'>
           <div className="w-full mid-xl:flex mid-xl:items-center">

@@ -13,7 +13,6 @@ export default function LoginForm({ login }) {
   const validCss = "backdrop-blur  bg-white/10 font-[DM-sans] mt-4 ring-inset ring-1 ring-red-500  text-white text-base md:text-xl  outline-none rounded p-2 w-10/12 lg:w-full sm:w-9/12 md:w-11/12"
 
   const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i;
-  const passRegex = /^([a-zA-Z0-9@*#]{8,15})$/i;
 
   async function submitHandler(event) {
     event.preventDefault();
@@ -37,7 +36,7 @@ export default function LoginForm({ login }) {
       emailError.current.innerHTML = "Please Enter Email"
       isError = true;
     }
-    if (password.current.value === "") {
+    if (password.current.value == "") {
       password.current.className = validCss
       passwordError.current.innerHTML = "Please Enter password"
       isError = true;
@@ -55,10 +54,11 @@ export default function LoginForm({ login }) {
         <div>
           <input className='input-css' placeholder='Email' type="text" ref={email} id="" />
         </div>
-        <div className='text-left ml-9 sm:ml-[90px] md:ml-[25px] lg:ml-0 text-red-500 text-base sm:text-xl lg:text-lg xl:text-xl font-[DM-sans] ' ref={emailError}></div>
+        <div className=' text-left text-red-500 pl-[40px] sm:pl-[90px] md:pl-[0px]  md:ml-[25px] lg:ml-1  font-[DM-sans]  text-base sm:text-lg' ref={emailError}></div>
         <div>
+
           <input className='input-css' placeholder='Password' type="password" ref={password} id="" />
-          <div className='text-left text-red-500 ml-9 sm:ml-[90px] md:ml-[25px] lg:ml-0  font-[DM-sans]  text-base sm:text-xl lg:text-lg xl:text-xl' ref={passwordError}></div>
+          <div className=' text-left text-red-500 pl-[40px] sm:pl-[90px] md:pl-[0px]  md:ml-[25px] lg:ml-1  font-[DM-sans]  text-base sm:text-lg' ref={passwordError}></div>
         </div>
         <div className='md:flex md:justify-between sm:flex sm:justify-between lg:flex lg:justify-between px-14 sm:px-24 md:px-4 xl:px-2 mt-4'>
           <div className="md:flex md:items-center">

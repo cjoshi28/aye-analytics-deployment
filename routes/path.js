@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:5000"
+const baseUrl = "https://aye-analytics.herokuapp.com/api"
 export const path = {
     register: `${baseUrl}/auth/register`,
     login: `${baseUrl}/auth/login`,

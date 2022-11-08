@@ -4,22 +4,29 @@ import Logo from '../../components/Logo'
 import LoginForm from '../../components/LoginForm'
 import Link from 'next/link'
 import { path } from '../../routes/path'
+import { ErrorModal } from '../../helper/helper'
+import { useContext } from 'react'
+import { useRouter } from 'next/router';
+import { AuthContext } from '../../provider/authProvider'
 
 export default function index() {
+  const router = useRouter();
+  const { status, session } = useContext(AuthContext)
 
   async function loginHandler(email, password) {
     await axios.post(path.login, {
       email,
       password
     }).then((response) => {
-      const data = {
-        email: response?.data?.email,
-        name: response?.data?.name,
-        token: response?.data?.token
+      if (response.data.success == true) {
+        status.login(response.data.name, response.data.token)
+        router.push('/dashboard')
+      } else {
+        ErrorModal("Something went wrong", response.data.message)
       }
-      localStorage.setItem("Session", JSON.stringify(data))
     }).catch((error) => {
       console.log(error)
+      ErrorModal("Something went wrong", error.message)
     })
   }
 
