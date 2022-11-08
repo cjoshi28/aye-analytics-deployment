@@ -6,24 +6,8 @@ import secureIcon from '../../public/images/dashboard/NFTholders.svg'
 import Image from 'next/image'
 
 
-export default function StatsWidget({ heading, value, percentage, icon }) {
+export default function StatsWidget({ heading, value, percentage }) {
     let color = true;
-
-    if (percentage < 0) color = false;
-
-    if (icon === "users") {
-        icon = <Image src={usersIcon} width={100} height={100} alt />
-    }
-    if (icon === "walletCheck") {
-        icon = <Image src={walletCheckIcon} width={100} height={100} alt />
-    }
-    if (icon === "secureUser") {
-        icon = <Image src={secureIcon} width={100} height={100} alt />
-    }
-    if (icon === "walletDollar") {
-        icon = <Image src={walletDollarIcon} width={100} height={100} alt />
-    }
-
 
     return (
         <div className="flex items-start justify-between p-4 bg-white shadow rounded-lg">
@@ -34,8 +18,14 @@ export default function StatsWidget({ heading, value, percentage, icon }) {
                     <span className={`${(color) ? "text-success" : "text-danger"} text-[14px] font-[DM-sans] lg:text-[16px]`}>{(color) ? "+" : ""}{percentage}% </span>
                 </div>
             </div>
-            <div className="inline-flex flex-shrink-0 items-center justify-center h-10 w-10 text-purple-600 bg-purple-100 rounded-lg p-[6px]">
-                {icon}
+            <div >
+                {heading === "Total Visitors" ? <Image className='icon-Css bg-fuchsia-100 px-3 py-[14px] rounded-xl' src={usersIcon} width={50} height={50} alt /> : " "}
+
+                {heading === "Wallet Connected" ? <Image className='icon-Css bg-purple-100 p-3 rounded-xl' src={walletCheckIcon} width={50} height={50} alt /> : " "}
+
+                {heading === "NFT Holders" ? <Image className='icon-Css bg-green-100 px-3 py-2 rounded-xl' src={secureIcon} width={50} height={50} alt /> : " "}
+
+                {heading === "Wallet Worth" ? <Image className='icon-Css bg-blue-100 p-3 rounded-xl' src={walletDollarIcon} width={50} height={50} alt /> : " "}
             </div>
         </div>
     )

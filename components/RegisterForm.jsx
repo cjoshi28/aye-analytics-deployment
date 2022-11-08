@@ -14,7 +14,6 @@ export default function RegisterForm({ signIn }) {
   const passwordError = useRef();
   const nameError = useRef();
   const cpasswordError = useRef();
-  const checkBox = useRef();
 
   const inputCss = "backdrop-blur bg-white/10 font-[DM-sans] mt-4 focus:ring-1 ring-voilet-light-5 focus:ring-inset text-white text-base md:text-xl mid-xl:text-xl outline-none rounded p-2 w-10/12 lg:w-full sm:w-9/12 md:w-11/12"
   const validCss = "backdrop-blur  bg-white/10 font-[DM-sans] mt-4 ring-inset ring-1 ring-red-500 text-white text-base md:text-xl  outline-none rounded p-2 w-10/12 lg:w-full sm:w-9/12 md:w-11/12"
@@ -35,7 +34,6 @@ export default function RegisterForm({ signIn }) {
     email.current.className = inputCss
     password.current.className = inputCss
     cpassword.current.className = inputCss
-    checkBox.current.className = "mid-xl:w-4 mid-xl:h-4 accent-voilet-light-5 border-none rounded"
 
     let isError = false;
 
@@ -87,11 +85,6 @@ export default function RegisterForm({ signIn }) {
       isError = true;
     }
 
-    if (!checkBox.current.checked) {
-      checkBox.current.className = "ring-2 ring-red-500  mid-xl:w-4 mid-xl:h-4 accent-voilet-light-5 border-none rounded"
-      isError = true;
-    }
-
     if (isError == false) {
       signIn(name.current.value, email.current.value, password.current.value)
     }
@@ -117,7 +110,7 @@ export default function RegisterForm({ signIn }) {
         </div>
         <div className='md:flex md:justify-between sm:flex sm:justify-between lg:flex lg:justify-between px-14 md:px-6 xl:px-2 mt-4'>
           <div className="w-full mid-xl:flex mid-xl:items-center">
-            <input type="checkbox" ref={checkBox} className="mid-xl:w-4 mid-xl:h-4 accent-voilet-light-5 rounded"
+            <input type="checkbox" className="mid-xl:w-4 mid-xl:h-4 accent-voilet-light-5 rounded"
             />
             <label className="ml-2 text-sm lg:text-sm  font-[DM-sans] text-voilet-light-3">
               By creating an account, I agree to Aye Analytics <br />

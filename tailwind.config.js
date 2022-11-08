@@ -4,6 +4,7 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./helper/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -16,12 +17,12 @@ module.exports = {
         'voilet-light-5': '#E346D1',
         'voilet-light-6': '#7C5BEE',
         'voilet-light-7': '#6348c4',
-        'voilet-light-8':'#EE61C9',
+        'voilet-light-8': '#EE61C9',
         'gray-color': '#5B5B5B',
         'gray-light-color': '#7B7B7B',
-        'gray-light-2':'#E9EEF5',
-        'danger':'#ff5724',
-        'success':'#53D0A4',
+        'gray-light-2': '#E9EEF5',
+        'danger': '#ff5724',
+        'success': '#53D0A4',
 
 
       },

@@ -83,3 +83,6 @@ a {
 .WalletTable th{
   @apply text-gray-500 font-medium text-xs lg:text-sm
 }
+.icons-Css{
+  @apply inline-flex flex-shrink-0 items-center justify-center
+}

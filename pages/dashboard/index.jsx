@@ -13,38 +13,38 @@ export default function index() {
       heading: "Total Visitors",
       value: "10K",
       percentage: "-10",
-      icon: "users",
     },
     {
       heading: "Wallet Connected",
       value: "120",
       percentage: "20",
-      icon: "walletCheck",
     },
     {
       heading: "NFT Holders",
       value: "1.2K",
-      percentage: "0.5",
-      icon: "secureUser",
+      percentage: "0.5"
     },
     {
       heading: "Wallet Worth",
       value: "2K",
       percentage: "40",
-      icon: "walletDollar",
     }
   ]
   return (
     <main className="p-6 sm:p-10 space-y-6 ">
       <section className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-        {
+        {/* {
           dashboardStats && dashboardStats.map((stats, index) => {
             return (
               <StatsWidget heading={stats.heading} value={stats.value} percentage={stats.percentage} icon={stats.icon} key={index} />
-
             )
           })
-        }
+        } */}
+        <StatsWidget heading={dashboardStats[0].heading} value={dashboardStats[0].value} percentage={dashboardStats[0].percentage} />
+        <StatsWidget heading={dashboardStats[1].heading} value={dashboardStats[1].value} percentage={dashboardStats[1].percentage} />
+        <StatsWidget heading={dashboardStats[2].heading} value={dashboardStats[2].value} percentage={dashboardStats[2].percentage} />
+        <StatsWidget heading={dashboardStats[3].heading} value={dashboardStats[3].value} percentage={dashboardStats[3].percentage} />
+
 
 
       </section>
