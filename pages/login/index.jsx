@@ -7,11 +7,11 @@ import { path } from '../../routes/path'
 import { ErrorModal } from '../../helper/helper'
 import { useContext } from 'react'
 import { useRouter } from 'next/router';
-import { AuthContext } from '../../provider/authProvider'
+import { AuthContext } from '../../provider/AuthProvider'
 
 export default function index() {
   const router = useRouter();
-  const { status, session } = useContext(AuthContext)
+  const { status , session } = useContext(AuthContext)
 
   async function loginHandler(email, password) {
     await axios.post(path.login, {

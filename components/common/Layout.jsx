@@ -2,12 +2,13 @@ import React from 'react'
 import Header from '../dashboard/Header'
 import Sidebar from '../dashboard/Sidebar'
 import { useContext, useEffect } from "react";
-import { AuthContext } from '../../provider/AuthProvider'
 import { useRouter } from 'next/router'
+import { AuthContext } from '../../provider/AuthProvider';
 function Layout({ children }) {
 
   const { status, session } = useContext(AuthContext);
   const router = useRouter()
+  console.log(status)
   useEffect(() => {
     console.log(status)
     // if (!status.loggedIn) router.push("/login")
