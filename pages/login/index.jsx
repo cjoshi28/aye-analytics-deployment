@@ -14,7 +14,7 @@ import { AuthContext } from '../../provider/AuthProvider'
 export default function index() {
 
   const router = useRouter();
-  const { status, session } = useContext(AuthContext)
+  const { status } = useContext(AuthContext)
   const [isLoader, setIsLoader] = useState(false)
 
   async function loginHandler(email, password) {

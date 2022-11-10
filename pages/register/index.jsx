@@ -22,7 +22,7 @@ export default function index() {
       setIsLoader(false)
       // console.log(response)
       if (response.data.success == true) {
-        SuccessModalWithRedirect("Success", response.data.message, "/login")
+        SuccessModalWithRedirect("Welcome to Aye Analytics", response.data.message, "/login")
       } else {
         ErrorModal("Something went wrong", response.data.message)
       }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRef } from 'react';
 
-export default function ForgotPasswordForm({reset}) {
+export default function ForgotPasswordForm({ forgot }) {
 
   const email = useRef();
   const emailError = useRef()
@@ -24,10 +24,10 @@ export default function ForgotPasswordForm({reset}) {
       emailError.current.innerHTML = "Please Enter Email"
       isError = true;
     }
-    if(isError == false){
-      reset(email.current.value)
+    if (isError == false) {
+      forgot(email.current.value)
     }
-    
+
   }
   return (
     <div className='text-center'>
