@@ -5,11 +5,11 @@ const AuthProvider = ({ children }) => {
 
   const [loggedIn, setLoggedIn] = useState(false);
   const [data, setData] = useState([]);
-
-  const ExpireSeconds = 5000; //1000 * 60 * 60 * 24  //1 Day in MilliSeconds
+  // const [siteToken , setSiteToken] = useState([])
+  const ExpireSeconds = 500000; //1000 * 60 * 60 * 24  //1 Day in MilliSeconds
   
   const login = (name, token) => {
-    localStorage.setItem("Session", JSON.stringify(token))
+    localStorage.setItem("Session", token)
     localStorage.setItem("User", name)
 
     setLoggedIn(true);
@@ -34,6 +34,21 @@ const AuthProvider = ({ children }) => {
     setData([]);
   }
 
+  const getToken = (token , name) => {
+    localStorage.getItem("Session", token)
+    localStorage.getItem("User", name)
+    setLoggedIn(true);
+    setData({
+      name: localStorage.getItem("User"),
+      token: localStorage.getItem("Session")
+    });
+    return {
+      name: localStorage.getItem("User"),
+      token: localStorage.getItem("Session")
+    }
+  }
+
+
   const contextValue = {
     status: {
       loggedIn,
@@ -42,7 +57,8 @@ const AuthProvider = ({ children }) => {
     },
     session: {
       data,
-      setData
+      setData,
+      getToken
     }
   };
   

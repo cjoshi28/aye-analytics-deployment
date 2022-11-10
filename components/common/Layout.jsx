@@ -7,12 +7,14 @@ import { AuthContext } from '../../provider/AuthProvider';
 function Layout({ children }) {
 
   const { status, session } = useContext(AuthContext);
+
   const router = useRouter()
   console.log(status)
   useEffect(() => {
     console.log(status)
-    // if (!status.loggedIn) router.push("/login")
-  }, [status])
+
+    if (!status.loggedIn) router.push("/login")
+  }, [status, session])
   return (
     <div className="flex bg-gray-light-2  max-h-screen ">
       <Sidebar />
