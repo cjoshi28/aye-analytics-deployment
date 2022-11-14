@@ -22,7 +22,7 @@ export default function Chart() {
       },
       line: "straight",
       colors: ["#EE61C9"],
-      background: ["#FFFFFF"],
+      // background: ["#FFFFFF"],
       zoom: {
         enabled: false,
       },
@@ -52,14 +52,14 @@ export default function Chart() {
     },
     grid: {
       row: {
-        colors: ["#F8FAFC"], // takes an array which will be repeated on columns
+        // colors: ["#F8FAFC"], // takes an array which will be repeated on columns
         opacity: 0.5,
       },
       column:{
-        colors: ["#F8FAFC"],
+        // colors: ["#F8FAFC"],
       }
     },
-    xaxis: {
+    xaxis: { 
       categories: [
         "10 Jan",
         "28 Jan",
@@ -75,8 +75,8 @@ export default function Chart() {
     },
   };
   return (
-    <div id="chart" className="basis-full">
-      <ReactApexChart
+    <div id="chart" className="basis-full ">
+      <ReactApexChart 
         options={options}
         series={series}
         type="line"

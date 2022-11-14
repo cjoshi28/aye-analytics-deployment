@@ -104,18 +104,18 @@ export default function RegisterForm({ signIn }) {
         <div>
           <input className='input-css' placeholder='Full Name' type="text" ref={name} id="" />
         </div>
-        <div className=' text-left text-red-500  mx-8 sm:mx-0 pl-[10px] sm:pl-[90px] md:pl-[0px]  md:ml-[25px] lg:ml-1  font-[DM-sans]  text-base sm:text-lg' ref={nameError}></div>
+        <div className='error-css' ref={nameError}></div>
         <div>
           <input className='input-css' placeholder='Email' type="text" ref={email} id="" />
-          <div className='text-left text-red-500  mx-8 sm:mx-0 pl-[10px] sm:pl-[90px] md:pl-[0px]  md:ml-[25px] lg:ml-1  font-[DM-sans]  text-base sm:text-lg' ref={emailError}></div>
+          <div className='error-css' ref={emailError}></div>
         </div>
         <div>
           <input className='input-css' placeholder='Password' type="password" ref={password} id="" />
-          <div className='text-left text-red-500  mx-8 sm:mx-0 pl-[10px] sm:pl-[90px] md:pl-[0px]  md:ml-[25px] lg:ml-1  font-[DM-sans]  text-base sm:text-lg' ref={passwordError}></div>
+          <div className='error-css' ref={passwordError}></div>
         </div>
         <div>
           <input className='input-css' placeholder='Confirm-Password' type="password" ref={cpassword} id="" />
-          <div className='text-left text-red-500  mx-8 sm:mx-0 pl-[10px] sm:pl-[90px] md:pl-[0px]  md:ml-[25px] lg:ml-1  font-[DM-sans]  text-base sm:text-lg' ref={cpasswordError}></div>
+          <div className='error-css' ref={cpasswordError}></div>
         </div>
         <div className='md:flex md:justify-between sm:flex sm:justify-between lg:flex lg:justify-between px-14 md:px-6 xl:px-2 mt-4'>
           <div className="w-full mid-xl:flex mid-xl:items-center">

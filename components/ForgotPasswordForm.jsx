@@ -35,7 +35,7 @@ export default function ForgotPasswordForm({ forgot }) {
         <div>
           <input className='input-css' placeholder='Email' type="text" ref={email} id="" />
         </div>
-        <div className=' text-left text-red-500 pl-[40px] sm:pl-[90px] md:pl-[0px]  md:ml-[25px] lg:ml-1  font-[DM-sans]  text-base sm:text-lg' ref={emailError}></div>
+        <div className='error-css' ref={emailError}></div>
         <div>
           <input className='btn-css' type="submit" value='send' />
         </div>

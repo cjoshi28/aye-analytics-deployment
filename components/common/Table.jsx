@@ -26,7 +26,7 @@ function Table({ columns, data }) {
           </tr>
         ))}
       </thead>
-      <tbody {...getTableBodyProps()}>
+      <tbody {...getTableBodyProps()} className="dark:text-white">
         {rows.map((row, i) => {
           prepareRow(row)
           return (

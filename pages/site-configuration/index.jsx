@@ -19,7 +19,7 @@ export default function index() {
   const router = useRouter();
 
   useEffect(() => {
-    console.log(status)
+    // console.log(status)
     if (!status.loggedIn && !status.loading) router.push("/login")
   }, [status, session])
 
@@ -34,22 +34,24 @@ export default function index() {
         Authorization: session.data.token
       }
     }).then((response) => {
-      console.log(response)
+      // console.log(response)
+      setIsLoader(false)
       if (response.data.success == true) {
         setWebsiteId(response.data.data.websiteId)
-        SuccessModal("Successfully", response.data.message)
+        SuccessModal("Success", response.data.message)
       } else {
         ErrorModal("something went wrong", response?.data.message)
       }
     }).catch((error) => {
-      console.log(error)
+      // console.log(error)
+      setIsLoader(false)
       ErrorModal("something went wrong", error?.response?.data?.message || error?.message || "Please contact site Admin")
     })
   }
 
   return (
     <>
-      {/* {(isLoader || status.loading) ? <FullScreenLoader /> : ""} */}
+      {(isLoader || status.loading) ? <FullScreenLoader /> : ""}
       <div className="min-h-screen bg-cover md:bg-cover flex flex-col lg:flex-row bg-[url('/images/mobileResponsive.png')] md:bg-[url('/images/MicrosoftTeams-image.png')]">
         <div className='md:basis-1/3 lg:basis-1/2 flex justify-center lg:items-center pt-[50px] md:pt-[100px] lg:pt-0'>
           <div className='w-60 sm:w-80 sm:h-64 md:h-34'>
@@ -84,7 +86,7 @@ function SiteConfigurationForm({ siteConfig }) {
   const inputCss = "backdrop-blur bg-white/10 font-[DM-sans] mt-4 focus:ring-1 ring-voilet-light-5 focus:ring-inset text-white text-base md:text-xl mid-xl:text-xl outline-none rounded p-2 w-10/12 lg:w-full sm:w-9/12 md:w-11/12"
   const validCss = "backdrop-blur  bg-white/10 font-[DM-sans] mt-4 ring-inset ring-1 ring-red-500  text-white text-base md:text-xl  outline-none rounded p-2 w-10/12 lg:w-full sm:w-9/12 md:w-11/12"
 
-  const webURLRegex = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)$/i;
+  const webURLRegex = /^((ftp|http|https):\/\/)?(www.)?(?!.*(ftp|http|https|www.))[a-zA-Z0-9_-]+(\.[a-zA-Z]+)+((\/)[\w#]+)*(\/\w+\?[a-zA-Z0-9_]+=\w+(&[a-zA-Z0-9_]+=\w+)*)?\/?$/i;
 
 
   async function submitHandler(event) {
@@ -126,11 +128,11 @@ function SiteConfigurationForm({ siteConfig }) {
         <div>
           <input className='input-css' ref={webName} placeholder='Website name' type="text" />
         </div>
-        <div className=' text-left text-red-500 pl-[40px] sm:pl-[90px] md:pl-[0px]  md:ml-[25px] lg:ml-1  font-[DM-sans]  text-base sm:text-lg' ref={webNameError}></div>
+        <div className='error-css' ref={webNameError}></div>
         <div>
           <input className='input-css' ref={webURL} placeholder='Website URL' type="text" />
         </div>
-        <div className=' text-left text-red-500 pl-[40px] sm:pl-[90px] md:pl-[0px]  md:ml-[25px] lg:ml-1  font-[DM-sans]  text-base sm:text-lg' ref={webURLError}></div>
+        <div className='error-css' ref={webURLError}></div>
         <div>
           <input type="submit" value="Submit" className="btn-css" />
         </div>

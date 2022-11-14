@@ -23,8 +23,11 @@ module.exports = {
         'gray-light-2': '#E9EEF5',
         'danger': '#ff5724',
         'success': '#53D0A4',
-
-
+        'black-color': '#000000',
+        'dark-blue': '#0C0234',
+        'purple-color': '#312757',
+        'purple-text': '#907DD3',
+        'light-black': "#1E1E1E"
       },
       screens: {
         'sm': '640px',

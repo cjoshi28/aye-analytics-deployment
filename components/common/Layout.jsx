@@ -22,9 +22,9 @@ function Layout({ children }) {
   return (
     <>
       {isLoader ? <FullScreenLoader /> : ""}
-      <div className="flex bg-gray-light-2  max-h-screen ">
+      <div className="flex bg-gray-light-2 dark:bg-[#000000] max-h-screen ">
         <Sidebar />
-        <div className="flex-grow text-gray-800 mt-[-5px] max-h-[100vh] overflow-scroll overflow-x-hidden">
+        <div className="flex-grow text-gray-800 mt-[-5px] max-h-screen overflow-scroll overflow-x-hidden">
           <Header />
           {children}
         </div>

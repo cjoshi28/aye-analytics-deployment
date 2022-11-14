@@ -14,6 +14,7 @@ export default function ResetPasswordForm({ reset }) {
   const validCss = "backdrop-blur  bg-white/10 font-[DM-sans] mt-4 ring-inset ring-1 ring-red-500  text-white text-base md:text-xl  outline-none rounded p-2 w-10/12 lg:w-full sm:w-9/12 md:w-11/12"
 
   const passRegex = /^([a-zA-Z0-9@*#]{8,15})$/i;
+  const OTPRegex = /^[0-9]{6}$/i;
 
   async function submitHandler(event) {
     event.preventDefault();
@@ -51,7 +52,13 @@ export default function ResetPasswordForm({ reset }) {
       isError = true;
     }
 
-    if (OTP.current.value === "") {
+    if (OTP.current.value !== "") {
+      if (!OTPRegex.test(OTP.current.value)) {
+        OTP.current.className = validCss
+        OTPError.current.innerHTML = "OTP should be 6-digits"
+        isError = true;
+      }
+    } else {
       OTP.current.className = validCss
       OTPError.current.innerHTML = "Please Enter OTP"
       isError = true;
@@ -67,15 +74,15 @@ export default function ResetPasswordForm({ reset }) {
         <div>
           <input className='input-css' type="password" ref={password} placeholder='New Password' />
         </div>
-        <div className=' text-left text-red-500  mx-8 sm:mx-0 pl-[10px] sm:pl-[90px] md:pl-[0px]  md:ml-[25px] lg:ml-1  font-[DM-sans]  text-base sm:text-lg' ref={passwordError}></div>
+        <div className='error-css' ref={passwordError}></div>
         <div>
           <input className='input-css' type="password" ref={cpassword} placeholder='Confirm Password' />
         </div>
-        <div className=' text-left text-red-500  mx-8 sm:mx-0 pl-[10px] sm:pl-[90px] md:pl-[0px]  md:ml-[25px] lg:ml-1  font-[DM-sans]  text-base sm:text-lg' ref={cpasswordError}></div>
+        <div className='error-css' ref={cpasswordError}></div>
         <div>
           <input className='input-css overflow-hidden' type="number" ref={OTP} placeholder='OTP' />
         </div>
-        <div className=' text-left text-red-500  mx-8 sm:mx-0 pl-[10px] sm:pl-[90px] md:pl-[0px]  md:ml-[25px] lg:ml-1  font-[DM-sans]  text-base sm:text-lg' ref={OTPError}></div>
+        <div className='error-css' ref={OTPError}></div>
 
         <input className='btn-css' type="submit" value="Verify" />
       </form>

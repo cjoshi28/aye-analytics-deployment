@@ -22,7 +22,7 @@ export default function index() {
       setIsLoader(false)
       // console.log(response)
       if (response.data.success == true) {
-        SuccessModalWithRedirect("Welcome to Aye Analytics", response.data.message, "/login")
+        SuccessModalWithRedirect(`Welcome ${name}, to Aye Analytics`, response.data.message, "/login")
       } else {
         ErrorModal("Something went wrong", response.data.message)
       }
@@ -38,6 +38,16 @@ export default function index() {
       title: title || "Sucessfull",
       text: description || "",
       confirmButtonText: 'OK',
+      iconColor: '#3E0D79',
+      confirmButtonColor: '#3E0D79',
+      showClass: {
+        popup: 'swal2-show',
+        backdrop: 'swal2-backdrop-show backdrop-blur-3xl',
+        icon: 'swal2-icon-show'
+      },
+      customClass: {
+        confirmButton: "w-40 rounded-lg",
+      }
     }).then((result) => {
       if (result.isConfirmed) {
         router.push(pathname)

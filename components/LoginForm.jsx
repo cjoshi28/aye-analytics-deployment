@@ -54,11 +54,10 @@ export default function LoginForm({ login }) {
         <div>
           <input className='input-css' placeholder='Email' type="text" ref={email} id="" />
         </div>
-        <div className=' text-left text-red-500 pl-[40px] sm:pl-[90px] md:pl-[0px]  md:ml-[25px] lg:ml-1  font-[DM-sans]  text-base sm:text-lg' ref={emailError}></div>
+        <div className='error-css' ref={emailError}></div>
         <div>
-
           <input className='input-css' placeholder='Password' type="password" ref={password} id="" />
-          <div className=' text-left text-red-500 pl-[40px] sm:pl-[90px] md:pl-[0px]  md:ml-[25px] lg:ml-1  font-[DM-sans]  text-base sm:text-lg' ref={passwordError}></div>
+          <div className='error-css' ref={passwordError}></div>
         </div>
         <div className='md:flex md:justify-between sm:flex sm:justify-between lg:flex lg:justify-between px-14 sm:px-24 md:px-4 xl:px-2 mt-4'>
           <div className="md:flex md:items-center">

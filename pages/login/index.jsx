@@ -28,10 +28,10 @@ export default function index() {
         status.login(response.data.name, response.data.token)
         router.push('/dashboard')
       } else {
-        ErrorModal(response.data.message, "Something went wrong",)
+        ErrorModal("Something went wrong", response.data.message,)
       }
     }).catch((error) => {
-      console.log(error)
+      // console.log(error)
       setIsLoader(false)
       ErrorModal(error?.response?.data?.message || error?.message || "Please contact site Admin", "Something went wrong, please check your credentials",)
     })

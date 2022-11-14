@@ -38,7 +38,7 @@ export default function VisitorTable() {
         accessor: 'info'
     }]
     return (
-        <div className='p-4 WalletTable'>
+        <div className='p-4 WalletTable '>
             <Table
                 data={visitor}
                 columns={columns} />
