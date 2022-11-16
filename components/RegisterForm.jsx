@@ -86,13 +86,13 @@ export default function RegisterForm({ signIn }) {
       isError = true;
     }
 
-    // if (!checkBox.current.checked) {
-    //   checkBox.current.className = "mid-xl:w-4 mid-xl:h-4 ring-2 ring-red-500 accent-voilet-light-5 rounded"
-    //   isError = true;
-    // } else {
-    //   checkBox.current.className = "mid-xl:w-4 mid-xl:h-4 accent-voilet-light-5 rounded"
-    //   isError = true;
-    // }
+    if (!checkBox.current.checked) {
+      checkBox.current.className = "mid-xl:w-4 mid-xl:h-4 ring-2 ring-red-500 accent-voilet-light-5 rounded"
+      isError = true;
+    } else {
+      checkBox.current.className = "mid-xl:w-4 mid-xl:h-4 accent-voilet-light-5 rounded"
+      isError = false;
+    }
 
     if (isError == false) {
       signIn(name.current.value, email.current.value, password.current.value)
@@ -102,7 +102,7 @@ export default function RegisterForm({ signIn }) {
     <div className='text-center '>
       <form action="" onSubmit={submitHandler}>
         <div>
-          <input className='input-css' placeholder='Full Name' type="text" ref={name} id="" />
+          <input className='input-css' placeholder='Full name' type="text" ref={name} id="" />
         </div>
         <div className='error-css' ref={nameError}></div>
         <div>
@@ -121,10 +121,10 @@ export default function RegisterForm({ signIn }) {
           <div className="w-full mid-xl:flex mid-xl:items-center">
             <input type="checkbox" ref={checkBox} className="mid-xl:w-4 mid-xl:h-4 accent-voilet-light-5 rounded"
             />
-            <label className="ml-2 text-sm lg:text-sm  font-[DM-sans] text-voilet-light-3">
+            <label className="ml-2 text-sm lg:text-sm  font-[DM-sans] text-voilet-light-3 ">
               By creating an account, I agree to Aye Analytics <br />
             </label>
-            <Link href="https://www.google.com" className="text-voilet-light-4 hover:text-voilet-light-2 font-[DM-sans] text-base lg:text-sm 2xl:text-base whitespace-pre"> Terms of Service
+            <Link href=" " className="text-voilet-light-4 hover:text-voilet-light-2 font-[DM-sans]  text-base lg:text-sm xl:text-base xl:font-bold  whitespace-pre "> Terms of Service
             </Link>
           </div>
 

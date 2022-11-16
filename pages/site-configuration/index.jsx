@@ -156,7 +156,7 @@ function SiteURLView({ websiteId }) {
       <form action="" >
         <h2 className='flex justify-center m-6 font-[DM-sans] text-sm sm:text-base lg:text-xs xl:text-xl text-gray-400'>{`To track stats for your website, place the following code in the <head> section of your website`}</h2>
         <div className='flex justify-center'>
-          <textarea ref={myRef} readOnly className='backdrop-blur bg-white/20 font-[DM-sans] mt-4 text-left text-white text-base md:lg break-words outline-none rounded p-6 pb-8 w-10/12 lg:w-full sm:w-9/12 md:w-11/12 overflow-hidden resize-none'>
+          <textarea ref={myRef} readOnly className='backdrop-blur bg-white/20 font-[DM-sans] mt-4 text-left text-white text-base  break-words outline-none rounded p-6 pb-14 xl:pb-12 w-10/12 lg:w-full sm:w-9/12 md:w-11/12 overflow-hidden resize-none'>
             {`<script async defer data-website-id = "${websiteId}" src="${trackingURL}"></script>`}
           </textarea >
         </div>

@@ -5,13 +5,13 @@ export default function Chart() {
   const series = [
     {
       data: [200, 100, 200, 300, 200, 300, 400, 300, 400, 500,],
-
     },
   ];
   const options = {
     chart: {
       height: 350,
       type: "area",
+      foreColor: '#7f8c8d',
       dropShadow: {
         enabled: !0,
         color: "#1E202C",
@@ -55,11 +55,11 @@ export default function Chart() {
         // colors: ["#F8FAFC"], // takes an array which will be repeated on columns
         opacity: 0.5,
       },
-      column:{
+      column: {
         // colors: ["#F8FAFC"],
       }
     },
-    xaxis: { 
+    xaxis: {
       categories: [
         "10 Jan",
         "28 Jan",
@@ -76,7 +76,7 @@ export default function Chart() {
   };
   return (
     <div id="chart" className="basis-full ">
-      <ReactApexChart 
+      <ReactApexChart
         options={options}
         series={series}
         type="line"

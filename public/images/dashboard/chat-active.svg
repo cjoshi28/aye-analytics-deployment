@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55" height="55" viewBox="0 0 55 55">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1.073" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ee61c9"/>
+      <stop offset="0.376" stop-color="#7c5bee"/>
+      <stop offset="0.661" stop-color="#5882dc"/>
+      <stop offset="1" stop-color="#53d0a4"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_5416" data-name="Group 5416" transform="translate(-22 -300)">
+    <rect id="Rectangle_2335" data-name="Rectangle 2335" width="55" height="55" rx="8" transform="translate(22 300)" opacity="0.4" fill="url(#linear-gradient)"/>
+    <g id="Group_5329" data-name="Group 5329" transform="translate(141 -1736)">
+      <path id="Icon_feather-message-circle" data-name="Icon feather-message-circle" d="M29.314,16.218a11.552,11.552,0,0,1-1.241,5.239A11.718,11.718,0,0,1,17.6,27.936a11.552,11.552,0,0,1-5.239-1.241L4.5,29.314l2.619-7.858a11.552,11.552,0,0,1-1.241-5.239A11.718,11.718,0,0,1,12.358,5.741,11.552,11.552,0,0,1,17.6,4.5h.689A11.69,11.69,0,0,1,29.314,15.529Z" transform="translate(-111.5 2045.5)" opacity="0.4"/>
+      <path id="Icon_feather-message-circle-2" data-name="Icon feather-message-circle" d="M4.5,13.28a8.656,8.656,0,0,0,.93,3.925,8.78,8.78,0,0,0,7.85,4.855,8.656,8.656,0,0,0,3.925-.93l5.888,1.963L21.13,17.205a8.656,8.656,0,0,0,.93-3.925,8.78,8.78,0,0,0-4.855-7.85A8.656,8.656,0,0,0,13.28,4.5h-.516A8.759,8.759,0,0,0,4.5,12.763Z" transform="translate(-99.093 2054.69)"/>
+    </g>
+  </g>
+</svg>

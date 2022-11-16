@@ -30,7 +30,7 @@ export default function index() {
     },
   ];
   return (
-    <main className="p-6 sm:p-10 space-y-6 ">
+    <main className="p-6 sm:p-10 space-y-6 dark:bg-light-black">
       <section className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
         {visitorsStats &&
           visitorsStats.map((stats, index) => {
@@ -46,9 +46,12 @@ export default function index() {
           })}
       </section>
       <section>
-        <div className="w-full bg-white rounded-md ">
-          <h1 className="ml-4 heading-widgets" >Recent Wallet Worth</h1>
-          <VisitorTable/>
+        <div className="bg-white rounded-md dark:bg-light-black">
+          <div className="w-full  rounded-md  flex justify-between">
+            <h1 className="ml-4 heading-widgets  dark:text-white mt-4" >Recent Wallet Worth</h1>
+            <h1 className="ml-4 heading-widgets  mt-4 mr-5 text-[#EE61C9] dark:text-[#EE61C9]" >View all</h1>
+          </div>
+          <VisitorTable />
         </div>
       </section>
     </main>

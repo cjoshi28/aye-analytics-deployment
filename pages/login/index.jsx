@@ -66,7 +66,7 @@ export default function index() {
               <span className="text-center text-voilet-light-4 flex justify-center text-[10px] lg:text-[13px] md:text-[12px] sm:text-[12px] font-[DM-sans]">
                 This is Protected by Google reCAPTCHA to ensure you're not a bot.
               </span>
-              <Link passHref href="https://www.google.com" className="text-voilet-light-6 flex justify-center text-sm whitespace-pre text-[15px] mid-xl:text-[17px] mt-1 mid-xl:mt-2 font-[DM-sans]"> Learn More</Link>
+              <Link passHref href=" " className="text-voilet-light-6 flex justify-center text-sm whitespace-pre text-[15px] mid-xl:text-[17px] mt-1 mid-xl:mt-2 font-[DM-sans]"> Learn More</Link>
             </div>
           </div>
         </div>

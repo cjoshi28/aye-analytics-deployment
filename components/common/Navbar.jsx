@@ -1,65 +1,72 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import Reactangle from "../../public/images/dashboard/Rectangle1719.svg";
-import dash from "../../public/images/dashboard/dashboard.svg";
-import visitor from "../../public/images/dashboard/visitor.svg";
+import dashActive from '../../public/images/dashboard/dashboard-active.svg'
+import dashInactive from '../../public/images/dashboard/dashboard-inactive.svg'
+import realActive from '../../public/images/dashboard/realTime-active.svg'
+import realInactive from '../../public/images/dashboard/realTime.svg'
+import visitorActive from '../../public/images/dashboard/visitor-active.svg'
+import visitorInactive from '../../public/images/dashboard/visitor-inactive.svg'
+import chatActive from '../../public/images/dashboard/chat-active.svg'
+import chatInactive from '../../public/images/dashboard/chat-inactive.svg'
 import logo from "../../public/images/dashboard/Logo.svg";
-import chat from "../../public/images/dashboard/chat.svg";
 import setting from "../../public/images/dashboard/Layer-2.svg";
-import realtime from "../../public/images/dashboard/realtime.jpg";
+import { useRouter } from "next/router";
+import Link from "next/link";
+
 
 function Navbar() {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
     setNav(!nav);
   };
+
+  const router = useRouter();
+
   return (
     <>
       {/* Mobile Button */}
       <div onClick={handleNav} className="block sm:hidden z-10">
-        {nav ? (<AiOutlineClose className="text-right" size={20} style={{ color: `black` }} />
+        {nav ? (<AiOutlineClose className="text-right dark:fill-white" size={20} style={{ color: `black` }} />
         ) : (
-          <AiOutlineMenu size={20} style={{ color: `black` }} />
+          <AiOutlineMenu className="dark:fill-white" size={20} style={{ color: `black` }} />
         )}
       </div>
       {/* Mobile Menu */}
-      <div className={nav ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-start items-center border w-6/12 h-screen bg-white text-center ease-in duration-300"
-        : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"}>
-        <div className="">
-          <aside className="w-16 sm:flex sm:flex-col h-[100vh] mt-20 border border-t-0">
-            <div className="inline-flex items-center justify-center pt-6 bg-white">
+      <div className={nav ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-start items-center dark:bg-black-color  w-2/12 h-screen bg-white text-center ease-in duration-300"
+        : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen dark:bg-black-color text-center ease-in duration-300"}>
+        <div className="pl-1">
+          <aside className="sm:flex sm:flex-col h-[100vh] mt-24 pb-28">
+            <div className="inline-flex items-center justify-center pt-6  dark:bg-black-color  bg-white">
               <Image src={logo} className="" alt="Logo" />
             </div>
-            <div className="flex-grow flex flex-col items-center h-full justify-between  text-gray-500 pt-8 bg-white">
+            <div className="flex-grow flex flex-col items-center h-full justify-between  text-gray-500 pt-8 bg-white  dark:bg-black-color">
               <nav className="flex flex-col h-72 items-center justify-evenly w-[7vh]">
-                <div
-                  className="inline-flex items-center justify-center rounded-lg"
-                  style={{ backgroundImage: `url(${Reactangle})` }}>
-                  <Image src={dash} alt="" />
-                </div>
-                <div
-                  className="inline-flex items-center w-9 justify-center rounded-lg"
-                  style={{ backgroundImage: `url(${Reactangle})` }}>
-                  <Image src={realtime} alt="" />
-                </div>
-                <div className="inline-flex items-center justify-center rounded-lg">
-                  <Image src={visitor} alt="" />
-                </div>
-                <div className="inline-flex items-center justify-center  rounded-lg">
-                  <Image src={chat} alt="" />
-                </div>
+                <Link passHref href={"/dashboard"}>
+                  <div className="inline-flex  items-center w-12 h-12 justify-center rounded-lg">
+                    {router.pathname == "/dashboard" ? <Image src={dashActive} alt="" /> : <Image src={dashInactive} alt="" />}
+                  </div>
+                </Link>
+                <Link passHref href={""}>
+                  <div className="inline-flex  items-center w-12 h-12 justify-center rounded-lg">
+                    {router.pathname == "" ? <Image src={realActive} alt="" /> : <Image src={realInactive} alt="" />}
+                  </div>
+                </Link>
+                <Link passHref href={"/visitor-list"}>
+                  <div className="inline-flex items-center w-12 h-12 justify-center rounded-lg">
+                    {router.pathname == "/visitor-list" ? <Image src={visitorActive} alt="" /> : <Image src={visitorInactive} alt="" />}
+                  </div>
+                </Link>
+                <Link passHref href={""}>
+                  <div className="inline-flex  items-center w-12 h-12 justify-center rounded-lg">
+                    {router.pathname == "" ? <Image src={chatActive} alt="" /> : <Image src={chatInactive} alt="" />}
+                  </div>
+                </Link>
               </nav>
               <div className="flex flex-col items-center w-full ">
-                <button className="p-3 hover:text-gray-400 rounded-lg">
+                <button className="p-3 hover:text-gray-400 rounded-lg ">
                   <Image src={setting} alt="" />
                 </button>
-                <span className="h-8 w-8 ml-2 mb-36 sm:ml-3 mr-2 bg-gray-100 rounded-full overflow-hidden">
-                  <img
-                    src="https://randomuser.me/api/portraits/women/68.jpg"
-                    alt="user profile photo"
-                    className="" />
-                </span>
               </div>
             </div>
           </aside>

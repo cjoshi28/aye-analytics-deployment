@@ -34,7 +34,7 @@ export default function Referrers() {
         <div className=' dark:bg-dark-blue bg-white w-full flex lg:flex-row flex-col justify-between p-3 rounded-3xl'>
             <div className=' basis-3/12 h-full text-xl flex items-center font-bold p-4'>
                 <div className='font-[DM-sans]'>
-                    <h1 className="heading-widgets">Referrers</h1>
+                    <h1 className="heading-widgets dark:text-white">Referrers</h1>
                     <div className='text-base mt-1 '>
                         <div className=' w-full rounded-lg font-[DM-sans] flex flex-col text-gray-400'>
                             <div className='w-full'>

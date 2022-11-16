@@ -4,7 +4,7 @@ import { Children } from "react"
 const Button = ({children,className, onClick}) => {
   return (
     <button
-      className={`p-2 rounded-md hover:ring-2 hover:ring-gray-300 ${className}`}
+      className={` rounded-md ${className}`}
       onClick={onClick}
     >{children}</button>
   )

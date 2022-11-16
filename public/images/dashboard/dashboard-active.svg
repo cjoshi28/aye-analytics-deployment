@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55" height="55" viewBox="0 0 55 55">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1.073" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ee61c9"/>
+      <stop offset="0.376" stop-color="#7c5bee"/>
+      <stop offset="0.661" stop-color="#5882dc"/>
+      <stop offset="1" stop-color="#53d0a4"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_5428" data-name="Group 5428" transform="translate(-22 -105)">
+    <rect id="Rectangle_1719" data-name="Rectangle 1719" width="55" height="55" rx="8" transform="translate(22 105)" opacity="0.4" fill="url(#linear-gradient)"/>
+    <g id="Dashboard_icon" data-name="Dashboard icon" transform="translate(35 118)">
+      <g id="invisible_box" data-name="invisible box">
+        <rect id="Rectangle_1745" data-name="Rectangle 1745" width="30" height="30" fill="none"/>
+      </g>
+      <g id="icons_Q2" data-name="icons Q2" transform="translate(3.771 2.514)">
+        <g id="Group_249" data-name="Group 249">
+          <path id="Path_870" data-name="Path 870" d="M14.8,30H7.257A1.257,1.257,0,0,0,6,31.257v6.285A1.257,1.257,0,0,0,7.257,38.8H14.8a1.257,1.257,0,0,0,1.257-1.257V31.257A1.257,1.257,0,0,0,14.8,30Z" transform="translate(-6 -13.659)" opacity="0.4"/>
+          <path id="Path_871" data-name="Path 871" d="M14.8,4H7.257A1.257,1.257,0,0,0,6,5.257V16.57a1.257,1.257,0,0,0,1.257,1.257H14.8a1.257,1.257,0,0,0,1.257-1.257V5.257A1.257,1.257,0,0,0,14.8,4Z" transform="translate(-6 -4)"/>
+          <path id="Path_872" data-name="Path 872" d="M34.8,4H27.257A1.257,1.257,0,0,0,26,5.257v6.285A1.257,1.257,0,0,0,27.257,12.8H34.8a1.257,1.257,0,0,0,1.257-1.257V5.257A1.257,1.257,0,0,0,34.8,4Z" transform="translate(-13.43 -4)" opacity="0.4"/>
+          <path id="Path_873" data-name="Path 873" d="M34.8,22H27.257A1.257,1.257,0,0,0,26,23.257V34.57a1.257,1.257,0,0,0,1.257,1.257H34.8a1.257,1.257,0,0,0,1.257-1.257V23.257A1.257,1.257,0,0,0,34.8,22Z" transform="translate(-13.43 -10.687)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
