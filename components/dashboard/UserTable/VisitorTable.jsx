@@ -21,25 +21,25 @@ export default function VisitorTable() {
 			return (
 				<>
 					{row.row.original.levels[0].value ?
-						<span className='rounded-2xl bg-[#7C5BEE] text-white px-2 py-[2px] text-xs mr-1'> {row.row.original.levels[0].value} </span> : ""}
+						<span className='rounded-2xl bg-light-purple text-white px-2 py-[2px] text-xs mr-1'> {row.row.original.levels[0].value} </span> : ""}
 
 					{row.row.original.levels[1].value ?
-						<span className='rounded-2xl bg-[#53D0A4] text-white px-2 py-[2px] text-xs mr-1' > {row.row.original.levels[1].value} </span> : ""}
+						<span className='rounded-2xl bg-light-green text-white px-2 py-[2px] text-xs mr-1' > {row.row.original.levels[1].value} </span> : ""}
 
 					{row.row.original.levels[2].value ?
-						<span className='rounded-2xl bg-[#EFBA27] text-white px-2 py-[2px] text-xs mr-1'> {row.row.original.levels[2].value} </span> : ""}
+						<span className='rounded-2xl bg-yellow-color text-white px-2 py-[2px] text-xs mr-1'> {row.row.original.levels[2].value} </span> : ""}
 
 					{row.row.original.levels[3].value ?
-						<span className='rounded-2xl bg-[#EE61C9] text-white px-2 py-[2px] text-xs mr-1'> {row.row.original.levels[3].value} </span> : ""}
+						<span className='rounded-2xl bg-fusicia-color text-white px-2 py-[2px] text-xs mr-1'> {row.row.original.levels[3].value} </span> : ""}
 
 					{row.row.original.levels[4].value ?
-						<span className='rounded-2xl bg-[#53D0A4] text-white px-2 py-[2px] text-xs mr-1'> {row.row.original.levels[4].value} </span> : ""}
+						<span className='rounded-2xl bg-light-green text-white px-2 py-[2px] text-xs mr-1'> {row.row.original.levels[4].value} </span> : ""}
 
 					{row.row.original.levels[5].value ?
-						<span className='rounded-2xl bg-[#E23F44] text-white px-2 py-[2px] text-xs mr-1'> {row.row.original.levels[5].value} </span> : ""}
+						<span className='rounded-2xl bg-light-red text-white px-2 py-[2px] text-xs mr-1'> {row.row.original.levels[5].value} </span> : ""}
 
 					{row.row.original.levels[6].value ?
-						<span className='rounded-2xl bg-[#53D0A4] text-white px-2 py-[2px] text-xs mr-1' > {row.row.original.levels[6].value} </span> : ""}
+						<span className='rounded-2xl bg-light-green text-white px-2 py-[2px] text-xs mr-1' > {row.row.original.levels[6].value} </span> : ""}
 				</>
 			);
 

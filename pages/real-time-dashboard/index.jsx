@@ -62,7 +62,7 @@ export default function index() {
 				<div className="bg-white rounded-md dark:bg-light-black">
 					<div className="w-full  rounded-md  flex justify-between">
 						<h1 className="ml-4 heading-widgets  dark:text-white mt-4" >Recent Wallet Worth</h1>
-						<h1 className="ml-4 heading-widgets  mt-4 mr-5 text-[#EE61C9] dark:text-[#EE61C9]" >View all</h1>
+						<h1 className="ml-4 heading-widgets  mt-4 mr-5 text-fusicia-color dark:text-fusicia-color" >View all</h1>
 					</div>
 					<RealtimeTable />
 				</div>
@@ -72,7 +72,6 @@ export default function index() {
 				<div className='basis-full  sm:w-full xl:w-4/12 lg:basis-1/2 rounded-lg dark:bg-black-color bg-white mt-6 lg:mt-0'>
 					<div className='mt-5 font-[DM-sans] first-letter  flex flex-row  justify-between '>
 						<span className='ml-4 heading-widgets pt-5 lg:pt-0 dark:text-white'>Referrer Report</span>
-
 					</div >
 					<ReferrerTable />
 				</div>
@@ -102,24 +101,24 @@ export default function index() {
 					<div className=" flex justify-center">
 						<div className=" w-10/12 lg:w-10/12 lg:py-10 xl:w-8/12  xl:py-5">
 							<div className="bg-white flex justify-center py-8 rounded-xl dark:bg-black-color">
-								<div className="w-9/12  border-l-4 border-l-[#7C5BEE]">
+								<div className="w-9/12  border-l-4 border-l-light-purple">
 									<div className="px-6 lg:px-5 font-[DM-sans]" >
 										<div className="my-2 font-bold  dark:text-white">Countries</div>
-										<span className="bg-[#E6DFFF] mr-4 text-[#7C5BEE] p-1 rounded">
+										<span className="bg-gray-light4 mr-4 text-light-purple p-1 rounded">
 											Russia
 										</span>
-										<span className="bg-[#E6DFFF] p-1 text-[#7C5BEE] rounded">
+										<span className="bg-gray-light4 p-1 text-light-purple rounded">
 											Australia
 										</span>
 										<div className="py-16" >
 											<div className="font-bold dark:text-white " >50 Visitors</div>
 											<div className="flex justify-between pt-3">
-												<span className="text-[#BDBDBD]" >Russia</span>
-												<span className="text-[#BDBDBD]" >30</span>
+												<span className="text-gray-light-3" >Russia</span>
+												<span className="text-gray-light-3" >30</span>
 											</div>
 											<div className="flex justify-between">
-												<span className="text-[#BDBDBD]" >Australia</span>
-												<span className="text-[#BDBDBD]" >20</span>
+												<span className="text-gray-light-3" >Australia</span>
+												<span className="text-gray-light-3" >20</span>
 											</div>
 										</div>
 									</div>

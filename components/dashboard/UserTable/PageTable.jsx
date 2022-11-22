@@ -14,7 +14,7 @@ export default function PageTable() {
     {
         Header: 'View',
         accessor: 'views',
-        Cell: props => <><span className='text-[#6667EB] mr-6 text-xs rounded-full px-[5px] py-[2px] bg-purple-200 bg-opacity-60 dark:bg-opacity-10'>100%</span>   <span className='number font-bold'> {props.value}</span></>
+        Cell: props => <><span className='text-light-purple mr-6 text-xs rounded-full px-[5px] py-[2px] bg-purple-200 bg-opacity-60 dark:bg-opacity-10'>100%</span>   <span className='number font-bold'> {props.value}</span></>
     }]
     return (
         <div className='p-4 WalletTable font-[DM-sans]'>

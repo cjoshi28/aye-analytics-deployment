@@ -49,7 +49,7 @@ export default function index() {
         <div className="bg-white rounded-md dark:bg-light-black">
           <div className="w-full  rounded-md  flex justify-between">
             <h1 className="ml-4 heading-widgets  dark:text-white mt-4" >Recent Wallet Worth</h1>
-            <h1 className="ml-4 heading-widgets  mt-4 mr-5 text-[#EE61C9] dark:text-[#EE61C9]" >View all</h1>
+            <h1 className="ml-4 heading-widgets  mt-4 mr-5 text-fusicia-color dark:text-fusicia-color" >View all</h1>
           </div>
           <VisitorTable />
         </div>

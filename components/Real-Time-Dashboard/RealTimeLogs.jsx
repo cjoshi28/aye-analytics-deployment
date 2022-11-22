@@ -15,7 +15,7 @@ export default function RealTimeLogs() {
                             <div className='flex gap-3 items-center' >
                                 <time className="text-sm font-normal font-[Segoe-UI] text-gray-500 dark:text-gray-400">5:21:25</time>
                                 <div className='mr-4 '>
-                                    <div className='  bg-[#53D0A4] w-3 h-3 rounded-full'></div>
+                                    <div className='  bg-light-green w-3 h-3 rounded-full'></div>
                                 </div>
                             </div>
                         </div>
@@ -33,7 +33,7 @@ export default function RealTimeLogs() {
                             <div className='flex gap-3 items-center' >
                                 <time className="text-sm font-normal  text-gray-500 dark:text-gray-400">5:21:25</time>
                                 <div className='mr-4 '>
-                                    <div className='  bg-[#53D0A4] w-3 h-3 rounded-full'></div>
+                                    <div className='  bg-light-green w-3 h-3 rounded-full'></div>
                                 </div>
                             </div>
                         </div>
@@ -50,7 +50,7 @@ export default function RealTimeLogs() {
                             <div className='flex gap-3 items-center' >
                                 <time className="text-sm font-normal  text-gray-500 dark:text-gray-400">5:21:25</time>
                                 <div className='mr-4 '>
-                                    <div className='  bg-[#53D0A4] w-3 h-3 rounded-full'></div>
+                                    <div className='  bg-light-green w-3 h-3 rounded-full'></div>
                                 </div>
                             </div>
                         </div>
@@ -97,7 +97,7 @@ function EyeBlock() {
                         <div className='flex gap-3 items-center' >
                             <time className="text-sm font-normal  text-gray-500 dark:text-gray-400">5:21:25</time>
                             <div className='mr-4 '>
-                                <div className='  bg-[#53D0A4] w-3 h-3 rounded-full'></div>
+                                <div className='bg-light-green w-3 h-3 rounded-full'></div>
                             </div>
                         </div>
                     </div>
