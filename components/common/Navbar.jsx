@@ -33,9 +33,9 @@ function Navbar() {
         )}
       </div>
       {/* Mobile Menu */}
-      <div className={nav ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-start items-center dark:bg-black-color  w-2/12 h-screen bg-white text-center ease-in duration-300"
+      <div className={nav ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center dark:bg-black-color  w-2/12 h-screen  px-1 bg-white text-center ease-in duration-300"
         : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen dark:bg-black-color text-center ease-in duration-300"}>
-        <div className="pl-1">
+        <div className="pl-1 ">
           <aside className="sm:flex sm:flex-col h-[100vh] mt-24 pb-28">
             <div className="inline-flex items-center justify-center pt-6  dark:bg-black-color  bg-white">
               <Image src={logo} className="" alt="Logo" />
@@ -47,9 +47,9 @@ function Navbar() {
                     {router.pathname == "/dashboard" ? <Image src={dashActive} alt="" /> : <Image src={dashInactive} alt="" />}
                   </div>
                 </Link>
-                <Link passHref href={""}>
+                <Link passHref href={"/real-time-dashboard"}>
                   <div className="inline-flex  items-center w-12 h-12 justify-center rounded-lg">
-                    {router.pathname == "" ? <Image src={realActive} alt="" /> : <Image src={realInactive} alt="" />}
+                    {router.pathname == "/real-time-dashboard" ? <Image src={realActive} alt="" /> : <Image src={realInactive} alt="" />}
                   </div>
                 </Link>
                 <Link passHref href={"/visitor-list"}>

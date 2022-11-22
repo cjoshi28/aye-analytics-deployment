@@ -24,22 +24,22 @@ export default function Header() {
   };
   return (
     <>
-      <header className="dark:bg-black-color p-2 pb-0 sticky top-0 shadow-lg z-50 bg-white flex justify-evenly items-center md:justify-end md:pb-2">
+      <header className="dark:bg-black-color border dark:border-none  p-2 pb-0 sticky top-0 shadow-lg z-50 bg-white flex justify-evenly items-center md:justify-end md:pb-2">
         <Navbar />
-        <form action="get" class="items-center w-2/3 pt-3 mb-3 md:mb-1 md:w-2/4 3xl:w-2/4 ">
+        <form action="get" className="items-center w-2/3 pt-3 mb-3 md:mb-1 md:w-2/4 3xl:w-2/4 ">
           <SearchBar />
         </form>
         <nav>
-          <ul class="flex items-center justify-between pt-2">
-            <li class="pt-1">
-              <div class="block text-grey-darkest no-underline md:border-none md:p-0 ">
+          <ul className="flex items-center justify-between pt-2">
+            <li className="pt-1">
+              <div className="block text-grey-darkest no-underline md:border-none md:p-0 ">
                 {renderThemeChanger()}
               </div>
             </li>
-            <li class="ml-4  ">
+            <li className="ml-4  ">
               <BellIcon />
             </li>
-            <li class="ml-4 mr-3">
+            <li className="ml-4 mr-3">
               <MenuIcon />
             </li>
           </ul>
@@ -87,9 +87,9 @@ export function SearchBar() {
           <svg
             fill="none"
             stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
             viewBox="0 0 24 24"
             className="w-6 h-6">
             <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
@@ -101,20 +101,20 @@ export function SearchBar() {
         name="q"
         className="py-1 text-white  w-full rounded-full pl-10 dark:bg-light-black focus:outline-gray-200 bg-gray-light-2 focus:bg-white focus:text-gray-900  dark:text-white pr-3 "
         placeholder="Search here...."
-        autocomplete="off" />
+        autoComplete="off" />
     </div>
   )
 }
 
 export function BellIcon() {
   return (
-    <div class="block  no-underline text-grey-darkest hover:underline hover:text-black md:p-0 ">
+    <div className="block  no-underline text-grey-darkest hover:underline hover:text-black md:p-0 ">
       <svg xmlns="http://www.w3.org/2000/svg" className="" width="18.833" height="22.913" viewBox="0 0 20.833 22.913">
         <g id="Icon_feather-bell" data-name="Icon feather-bell" transform="translate(-2.083 -1.042)">
           <path id="Path_844" data-name="Path 844" d="M18.75,8.333a6.25,6.25,0,0,0-12.5,0c0,7.292-3.125,9.375-3.125,9.375h18.75S18.75,15.625,18.75,8.333" fill="none" className="dark:stroke-white" stroke="#000"
             strokeLinecap="round"
-            stroke-linejoin="round"
-            stroke-width="2.083" />
+            strokeLinejoin="round"
+            strokeWidth="2.083" />
           <path
             id="Path_845"
             data-name="Path 845"
@@ -123,8 +123,8 @@ export function BellIcon() {
             className="dark:stroke-white"
             stroke="#000"
             strokeLinecap="round"
-            stroke-linejoin="round"
-            stroke-width="2.083" />
+            strokeLinejoin="round"
+            strokeWidth="2.083" />
         </g>
       </svg>
     </div>
@@ -133,22 +133,22 @@ export function BellIcon() {
 
 export function MenuIcon() {
   return (
-    <div class="block text-grey-darkest hover:underline hover:text-black md:p-0 md:border-none">
+    <div className="block text-grey-darkest hover:underline hover:text-black md:p-0 md:border-none">
       <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
         <g id="Group_243" data-name="Group 243" transform="translate(-3809 -1230)">
-          <g id="Rectangle_1733" data-name="Rectangle 1733" transform="translate(3809 1230)" fill="#fff" className="dark:stroke-white" stroke="#000" stroke-width="2">
+          <g id="Rectangle_1733" data-name="Rectangle 1733" transform="translate(3809 1230)" fill="#fff" className="dark:stroke-white" stroke="#000" strokeWidth="2">
             <rect width="8" height="8" rx="2" stroke="none" />
             <rect x="1" y="1" width="6" height="6" rx="1" fill="none" />
           </g>
-          <g id="Rectangle_1735" data-name="Rectangle 1735" transform="translate(3820 1230)" fill="#fff" className="dark:stroke-white" stroke="#000" stroke-width="2">
+          <g id="Rectangle_1735" data-name="Rectangle 1735" transform="translate(3820 1230)" fill="#fff" className="dark:stroke-white" stroke="#000" strokeWidth="2">
             <rect width="8" height="8" rx="2" stroke="none" />
             <rect x="1" y="1" width="6" height="6" rx="1" fill="none" />
           </g>
-          <g id="Rectangle_1736" data-name="Rectangle 1736" transform="translate(3820 1241)" fill="#fff" className="dark:stroke-white" stroke="#000" stroke-width="2">
+          <g id="Rectangle_1736" data-name="Rectangle 1736" transform="translate(3820 1241)" fill="#fff" className="dark:stroke-white" stroke="#000" strokeWidth="2">
             <rect width="8" height="8" rx="2" stroke="none" />
             <rect x="1" y="1" width="6" height="6" rx="1" fill="none" />
           </g>
-          <g id="Rectangle_1734" data-name="Rectangle 1734" transform="translate(3809 1241)" fill="#fff" className="dark:stroke-white" stroke="#000" stroke-width="2">
+          <g id="Rectangle_1734" data-name="Rectangle 1734" transform="translate(3809 1241)" fill="#fff" className="dark:stroke-white" stroke="#000" strokeWidth="2">
             <rect width="8" height="8" rx="2" stroke="none" />
             <rect x="1" y="1" width="6" height="6" rx="1" fill="none" />
           </g>

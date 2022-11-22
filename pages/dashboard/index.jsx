@@ -7,7 +7,6 @@ import UserTable from '../../components/dashboard/UserTable/UserTable';
 const Chart = dynamic(() => { return import('../../components/dashboard/Chart') }, { ssr: false });
 
 export default function index() {
-
   const dashboardStats = [
     {
       heading: "Total Visitors",
@@ -16,7 +15,7 @@ export default function index() {
     },
     {
       heading: "Wallet Connected",
-      value: "120",
+      value: "120K",
       percentage: "20",
     },
     {

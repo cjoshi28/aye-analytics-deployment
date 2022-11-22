@@ -27,19 +27,19 @@ export default function StatsWidget({ heading, value, percentage }) {
                 </div>
             </div>
             <div >
-                {heading === "Total Visitors" ? <Image className='icon-Css dark:bg-opacity-20 bg-fuchsia-100 px-3 py-[14px] rounded-xl' src={usersIcon} width={50} height={50} alt /> : " "}
+                {heading === "Total Visitors" ? <Image className='icon-Css dark:bg-opacity-20 bg-fuchsia-100 px-3 py-[14px] rounded-xl' src={usersIcon} width={50} height={50} alt="" /> : " "}
 
-                {heading === "Wallet Connected" ? <Image className='icon-Css dark:bg-opacity-20 bg-purple-100 p-3 rounded-xl' src={walletCheckIcon} width={50} height={50} alt /> : " "}
+                {heading === "Wallet Connected" ? <Image className='icon-Css dark:bg-opacity-20 bg-purple-100 p-3 rounded-xl' src={walletCheckIcon} width={50} height={50} alt="" /> : " "}
 
-                {heading === "NFT Holders" ? <Image className='icon-Css dark:bg-opacity-20 bg-green-100 px-3 py-2 rounded-xl' src={secureIcon} width={50} height={50} alt /> : " "}
+                {heading === "NFT Holders" ? <Image className='icon-Css dark:bg-opacity-20 bg-green-100 px-3 py-2 rounded-xl' src={secureIcon} width={50} height={50} alt="" /> : " "}
 
-                {heading === "Wallet Worth" ? <Image className='icon-Css dark:bg-opacity-20 bg-blue-100 p-3 rounded-xl' src={walletDollarIcon} width={50} height={50} alt /> : " "}
+                {heading === "Wallet Worth" ? <Image className='icon-Css dark:bg-opacity-20 bg-blue-100 p-3 rounded-xl' src={walletDollarIcon} width={50} height={50} alt="" /> : " "}
 
-                {heading === "24 Hr Visitors" ? <Image className='icon-Css dark:bg-opacity-20 bg-purple-100 p-3 rounded-xl' src={userTime} width={53} height={53} alt /> : " "}
+                {heading === "24 Hr Visitors" ? <Image className='icon-Css dark:bg-opacity-20 bg-purple-100 p-3 rounded-xl' src={userTime} width={53} height={53} alt="" /> : " "}
 
-                {heading === "Visitors for a week" ? <Image className='icon-Css dark:bg-opacity-20 bg-green-100 p-3 rounded-xl' src={userWeek} width={54} height={54} alt /> : " "}
+                {heading === "Visitors for a week" ? <Image className='icon-Css dark:bg-opacity-20 bg-green-100 p-3 rounded-xl' src={userWeek} width={54} height={54} alt="" /> : " "}
 
-                {heading === "Visitors for a month" ? <Image className='icon-Css dark:bg-opacity-20 bg-blue-100 p-3 rounded-xl' src={userCalender} width={54} height={54} alt /> : " "}
+                {heading === "Visitors for a month" ? <Image className='icon-Css dark:bg-opacity-20 bg-blue-100 p-3 rounded-xl' src={userCalender} width={54} height={54} alt="" /> : " "}
             </div>
         </div>
     )

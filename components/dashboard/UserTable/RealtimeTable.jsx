@@ -1,13 +1,16 @@
 import React from 'react'
 import { useState } from 'react'
-import VisitorDetails from '../Details/VisitorDetails'
+import RealVisitor from '../Details/RealVisitor'
 import Table from '../../common/Table'
 
 
-export default function VisitorTable() {
+export default function RealtimeTable() {
 
-	const [visitor, setVisitor] = useState(VisitorDetails)
-	// const [levelData, setLevelData] = useState([])
+	const [visitor, setVisitor] = useState(RealVisitor)
+	// const level = visitor.map((value, index) => {
+	//     return (value)
+	// })
+	// console.log(level)
 	const columns = [{
 		Header: 'Wallet Address',
 		accessor: 'walletAddress', // String-based value accessors!
@@ -42,46 +45,10 @@ export default function VisitorTable() {
 						<span className='rounded-2xl bg-[#53D0A4] text-white px-2 py-[2px] text-xs mr-1' > {row.row.original.levels[6].value} </span> : ""}
 				</>
 			);
-
-			// const data = row.row.original.levels
-			// const val2 = data.map((val) => {
-			// 	{ val.value }
-			// 	// console.log(val.value)
-			// })
-			// console.log(val2)
-			// return (
-
-			// 	{ val2 }
-			// )
-			// return (
-
-			// )
-			// return (
-			// 	<>
-			// 		{row.row.original.levels.value1 ?
-			// 			<span className='rounded-2xl bg-[#7C5BEE] px-2 py-[2px] text-xs mr-1'> {row.row.original.levels.value1} </span> : ""}
-
-			// 		{row.row.original.levels.value2 ?
-			// 			<span className='rounded-2xl bg-[#53D0A4] px-2 py-[2px] text-xs mr-1' > {row.row.original.levels.value2} </span> : ""}
-
-			// 		{row.row.original.levels.value3 ?
-			// 			<span className='rounded-2xl bg-[#EFBA27] px-2 py-[2px] text-xs mr-1'> {row.row.original.levels.value3} </span> : ""}
-			// 	</>
-			// );
-
-
-			// const data = row.rows.map((value) => {
-			// 	value.original.levels.map((level) => {
-			// 		{ level.value }
-			// 		// return
-			// 	})
-
-			// })
-			// { data }
 		}
-	},
-	// console.log(row)
 
+	},
+	// <span className='rounded-2xl bg-[#EFBA27] px-2 py-[2px] text-sm'>{props.value}</span>
 
 	{
 		Header: 'Eth Balance',
@@ -101,6 +68,7 @@ export default function VisitorTable() {
 	{
 		Header: 'Chat',
 		Cell: () => <ChatIcon />
+
 	},
 	{
 		Header: 'Info',
@@ -121,7 +89,6 @@ function ChatIcon() {
 		<svg xmlns="http://www.w3.org/2000/svg" width="23.073" height="23.073" viewBox="0 0 23.073 23.073">
 			<path id="Icon_material-chat_bubble_outline" data-name="Icon material-chat_bubble_outline" d="M22.932,2.167H4.474A2.314,2.314,0,0,0,2.167,4.474V25.239l4.615-4.615H22.932a2.314,2.314,0,0,0,2.307-2.307V4.474a2.314,2.314,0,0,0-2.307-2.307Zm0,16.151H6.781L4.474,20.625V4.474H22.932V18.318Z" transform="translate(-2.167 -2.167)" className='dark:fill-white' />
 		</svg>
-
 	)
 }
 

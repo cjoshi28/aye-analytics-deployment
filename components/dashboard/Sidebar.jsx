@@ -20,20 +20,20 @@ export default function Sidebar() {
 
   return (
     <>
-      <aside className="hidden sm:flex sm:flex-col h-[100vh] px-2 bg-white dark:bg-black-color">
+      <aside className="hidden border dark:border-none sm:flex sm:flex-col h-[100vh] px-1 bg-white dark:bg-black-color">
         <div className="inline-flex items-center justify-center py-3  ">
           <Image src={logo} className="" alt="Logo" />
         </div>
-        <div className="flex-grow flex flex-col items-center justify-between text-gray-500 pt-8 dark:bg-black-color bg-white">
-          <nav className="flex flex-col h-72 items-center justify-evenly w-[7vh]">
+        <div className="flex-grow flex flex-col items-center justify-between  text-gray-500 pt-8 dark:bg-black-color bg-white">
+          <nav className="flex flex-col h-72 items-center justify-evenly px-1">
             <Link passHref href={"/dashboard"}>
               <div className="inline-flex  items-center w-12 h-12 justify-center rounded-lg">
                 {router.pathname == "/dashboard" ? <Image src={dashActive} alt="" /> : <Image src={dashInactive} alt="" />}
               </div>
             </Link>
-            <Link passHref href={""}>
-              <div className="inline-flex  items-center w-12 h-12 justify-center rounded-lg">
-                {router.pathname == "" ? <Image src={realActive} alt="" /> : <Image src={realInactive} alt="" />}
+            <Link passHref href={"/real-time-dashboard"}>
+              <div className="inline-flex items-center w-12 h-12 justify-center rounded-lg">
+                {router.pathname == "/real-time-dashboard" ? <Image src={realActive} alt="" /> : <Image src={realInactive} alt="" />}
               </div>
             </Link>
             <Link passHref href={"/visitor-list"}>
