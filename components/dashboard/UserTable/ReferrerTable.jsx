@@ -8,7 +8,7 @@ export default function ReferrerTable() {
     const columns = [{
         Header: 'Referrers',
         accessor: 'referrers', // String-based value accessors!
-        Cell: props => <span className='font-semibold'>{props.value}</span>
+        Cell: props => <span className='font-semibold '>{props.value}</span>
 
     },
     {

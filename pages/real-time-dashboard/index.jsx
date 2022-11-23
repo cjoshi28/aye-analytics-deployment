@@ -69,21 +69,21 @@ export default function index() {
 			</section>
 
 			<section className='xl:flex md:gap-6'>
-				<div className='basis-full  sm:w-full xl:w-4/12 lg:basis-1/2 rounded-lg dark:bg-black-color bg-white mt-6 lg:mt-0'>
-					<div className='mt-5 font-[DM-sans] first-letter  flex flex-row  justify-between '>
-						<span className='ml-4 heading-widgets pt-5 lg:pt-0 dark:text-white'>Referrer Report</span>
+				<div className='basis-full  sm:w-full xl:w-4/12 lg:basis-1/2 rounded-lg dark:bg-black-color bg-white mt-6 lg:mt-0 px-5 xl:px-2'>
+					<div className='mt-5 font-[DM-sans] first-letter  flex flex-row  justify-between  '>
+						<span className='ml-4 heading-widgets pt-5 xl:pt-0 dark:text-white'>Referrer Report</span>
 					</div >
 					<ReferrerTable />
 				</div>
-				<div className='basis-full sm:w-full xl:w-4/12 lg:basis-1/2 rounded-lg dark:bg-black-color bg-white mt-6 lg:mt-0'>
+				<div className='basis-full sm:w-full xl:w-4/12 lg:basis-1/2 rounded-lg dark:bg-black-color bg-white mt-6 lg:mt-0 px-5 xl:px-2'>
 					<div className='mt-5 font-[DM-sans] first-letter  flex flex-row  justify-between '>
-						<span className='ml-4 heading-widgets pt-5 lg:pt-0 dark:text-white'>Pages Report</span>
+						<span className='ml-4 heading-widgets pt-5 xl:pt-0 dark:text-white'>Pages Report</span>
 					</div >
 					<PageTable />
 				</div>
-				<div className='basis-full sm:w-full xl:w-4/12 lg:basis-1/2 rounded-lg dark:bg-black-color bg-white mt-6 lg:mt-0'>
+				<div className='basis-full sm:w-full xl:w-4/12 lg:basis-1/2 rounded-lg dark:bg-black-color bg-white mt-6 lg:mt-0 px-5 xl:px-2'>
 					<div className='mt-5 font-[DM-sans] first-letter sm:mb-10  flex flex-row  justify-between '>
-						<span className='ml-4 heading-widgets pt-5 lg:pt-0 dark:text-white'>Real Time Logs</span>
+						<span className='ml-4 heading-widgets pt-5 xl:pt-0 dark:text-white'>Real Time Logs</span>
 						<div className="mr-5">
 							<EllipsisHorizonatal />
 						</div>
