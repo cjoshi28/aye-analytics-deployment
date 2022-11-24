@@ -25,17 +25,15 @@ export default function RegisterForm({ signIn }) {
   async function submitHandler(event) {
     event.preventDefault();
 
-    nameError.current.innerHTML = ""
-    emailError.current.innerHTML = ""
-    passwordError.current.innerHTML = ""
-    cpasswordError.current.innerHTML = ""
-
     name.current.className = inputCss
     email.current.className = inputCss
     password.current.className = inputCss
     cpassword.current.className = inputCss
 
-
+    nameError.current.innerHTML = ""
+    emailError.current.innerHTML = ""
+    passwordError.current.innerHTML = ""
+    cpasswordError.current.innerHTML = ""
     let isError = false;
 
     if (name.current.value !== "") {
@@ -62,6 +60,12 @@ export default function RegisterForm({ signIn }) {
       isError = true;
     }
 
+    if (!checkBox.current.checked) {
+      checkBox.current.className = "mid-xl:w-4 mid-xl:h-4 ring-2 ring-red-500 accent-voilet-light-5 rounded"
+      isError = true;
+    } else {
+      checkBox.current.className = "mid-xl:w-4 mid-xl:h-4 accent-voilet-light-5 rounded"
+    }
 
     if (password.current.value !== "") {
       if (!passRegex.test(password.current.value)) {
@@ -86,13 +90,7 @@ export default function RegisterForm({ signIn }) {
       isError = true;
     }
 
-    if (!checkBox.current.checked) {
-      checkBox.current.className = "mid-xl:w-4 mid-xl:h-4 ring-2 ring-red-500 accent-voilet-light-5 rounded"
-      isError = true;
-    } else {
-      checkBox.current.className = "mid-xl:w-4 mid-xl:h-4 accent-voilet-light-5 rounded"
-      isError = false;
-    }
+
 
     if (isError == false) {
       signIn(name.current.value, email.current.value, password.current.value)

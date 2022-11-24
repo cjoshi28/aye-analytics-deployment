@@ -14,7 +14,7 @@ export default function RealtimeTable() {
 	const columns = [{
 		Header: 'Wallet Address',
 		accessor: 'walletAddress', // String-based value accessors!
-		Cell: props => <span className='font-semibold xl:text-base lg:text-sm text-xs'>{props.value}</span> // Custom cell components!
+		Cell: props => <span className='md:md:font-semibold xl:text-base lg:text-sm text-xs'>{props.value}</span> // Custom cell components!
 	},
 	{
 		Header: 'Levels',
@@ -22,7 +22,7 @@ export default function RealtimeTable() {
 		Cell: (row) => {
 			// console.log(row.row.original.levels[0].value)
 			return (
-				<div className='px-2'>
+				<div className='pr-2 lg:pr-0'>
 					{row.row.original.levels[0].value ?
 						<span className='rounded-2xl bg-light-purple text-white px-[5px] lg:px-2 py-[2px] text-[10px] lg:text-xs mr-1'> {row.row.original.levels[0].value} </span> : ""}
 
@@ -53,17 +53,17 @@ export default function RealtimeTable() {
 	{
 		Header: 'Eth Balance',
 		accessor: 'ethBalance',
-		Cell: props => <span className='number font-semibold xl:text-base lg:text-sm text-xs'>{props.value + "Eth"}</span> // Custom cell components!
+		Cell: props => <span className='number md:font-semibold xl:text-base lg:text-sm text-xs'>{props.value + "Eth"}</span> // Custom cell components!
 	},
 	{
 		Header: 'Ecr20 Token Worth',
 		accessor: 'ecr20TokenWorth',
-		Cell: props => <span className='number font-semibold xl:text-base lg:text-sm text-xs'>{props.value + "Eth"}</span> // Custom cell components!
+		Cell: props => <span className='number md:font-semibold xl:text-base lg:text-sm text-xs'>{props.value + "Eth"}</span> // Custom cell components!
 	},
 	{
 		Header: 'NFT Count',
 		accessor: 'nftCount',
-		Cell: props => <span className='number font-semibold xl:text-base lg:text-sm text-xs'>{props.value + "NFT"}</span> // Custom cell components!
+		Cell: props => <span className='number md:font-semibold xl:text-base lg:text-sm text-xs'>{props.value + "NFT"}</span> // Custom cell components!
 	},
 	{
 		Header: 'Chat',
