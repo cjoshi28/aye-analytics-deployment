@@ -2,7 +2,7 @@ import React from "react";
 import StatsWidget from "../../components/common/StatsWidget";
 import VisitorTable from "../../components/dashboard/UserTable/VisitorTable";
 
-export default function index() {
+export default function Index() {
   const visitorsStats = [
     {
       heading: "Total Visitors",

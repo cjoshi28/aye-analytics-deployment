@@ -11,7 +11,7 @@ import { useRouter } from 'next/router';
 import { AuthContext } from '../../provider/AuthProvider'
 
 
-export default function index() {
+export default function Index() {
 
   const router = useRouter();
   const { status } = useContext(AuthContext)

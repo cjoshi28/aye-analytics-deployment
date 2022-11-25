@@ -6,7 +6,7 @@ import UserTable from '../../components/dashboard/UserTable/UserTable';
 
 const Chart = dynamic(() => { return import('../../components/dashboard/Chart') }, { ssr: false });
 
-export default function index() {
+export default function Index() {
   const dashboardStats = [
     {
       heading: "Total Visitors",

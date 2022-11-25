@@ -2,7 +2,7 @@ import React from 'react'
 import EmailForm from '../../components/EmailForm'
 import Logo from '../../components/Logo'
 
-export default function index() {
+export default function Index() {
   return (
     <div className="min-h-screen bg-cover md:bg-cover flex flex-col lg:flex-row bg-[url('/images/mobileResponsive.png')] md:bg-[url('/images/MicrosoftTeams-image.png')]">
       <div className='md:basis-1/3 lg:basis-1/2 flex justify-center lg:items-center pt-[50px] md:pt-[100px] lg:pt-0'>

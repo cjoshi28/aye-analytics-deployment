@@ -7,7 +7,7 @@ import { path } from '../../routes/path'
 import { ErrorModal } from '../../helper/helper'
 import { FullScreenLoader } from '../../components/common/FullscreenLoader'
 import Swal from 'sweetalert2'
-export default function index() {
+export default function Index() {
 
   const [isLoader, SetIsLoader] = useState(false)
   const router = useRouter()

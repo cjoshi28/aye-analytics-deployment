@@ -9,7 +9,7 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 import { FullScreenLoader } from '../../components/common/FullscreenLoader';
 import Link from 'next/link';
 
-export default function index() {
+export default function Index() {
 
   const { session, status } = useContext(AuthContext)
   const [websiteId, SetWebsiteId] = useState(null)

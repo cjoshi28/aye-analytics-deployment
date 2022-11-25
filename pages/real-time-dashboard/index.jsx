@@ -11,7 +11,7 @@ import RealTimeLogs from "../../components/Real-Time-Dashboard/RealTimeLogs";
 
 const RealChart = dynamic(() => { return import('../../components/Real-Time-Dashboard/RealChart') }, { ssr: false });
 
-export default function index() {
+export default function Index() {
 	const [content, SetContent] = useState("");
 
 	const realStats = [

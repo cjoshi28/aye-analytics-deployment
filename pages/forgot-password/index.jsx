@@ -9,7 +9,8 @@ import { FullScreenLoader } from '../../components/common/FullscreenLoader';
 import { SuccessModal } from '../../helper/helper';
 import ResetPasswordForm from '../../components/ResetPasswordForm';
 import Swal from 'sweetalert2';
-export default function index() {
+
+export default function Index() {
 
   const [email, SetEmail] = useState(null)
   const [isLoader, SetIsLoader] = useState(false)
