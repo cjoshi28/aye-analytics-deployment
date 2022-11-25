@@ -8,14 +8,14 @@ import { FullScreenLoader } from './FullscreenLoader';
 function Layout({ children }) {
 
   const { status, session } = useContext(AuthContext);
-  const [isLoader, setIsLoader] = useState(false)
+  const [isLoader, SetIsLoader] = useState(false)
 
   const router = useRouter()
   // console.log(status)
   useEffect(() => {
     // console.log(status)
     if (!status.loggedIn && !status.loading) {
-      setIsLoader(true)
+      SetIsLoader(true)
       router.push("/login")
     }
   }, [status, session])

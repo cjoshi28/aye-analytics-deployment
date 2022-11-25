@@ -9,17 +9,17 @@ import { FullScreenLoader } from '../../components/common/FullscreenLoader'
 import Swal from 'sweetalert2'
 export default function index() {
 
-  const [isLoader, setIsLoader] = useState(false)
+  const [isLoader, SetIsLoader] = useState(false)
   const router = useRouter()
 
   async function signInHandler(name, email, password) {
-    setIsLoader(true)
+    SetIsLoader(true)
     await axios.post(path.register, {
       name,
       email,
       password
     }).then((response) => {
-      setIsLoader(false)
+      SetIsLoader(false)
       // console.log(response)
       if (response.data.success == true) {
         SuccessModalWithRedirect(`Welcome ${name}, to Aye Analytics`, response.data.message, "/login")
@@ -28,7 +28,7 @@ export default function index() {
       }
     }).catch((error) => {
       // console.log(error)
-      setIsLoader(false)
+      SetIsLoader(false)
       ErrorModal("Something went wrong", error?.response?.data?.message || error?.message || "Please contact site Admin")
     })
   }

@@ -6,7 +6,7 @@ import Table from '../../common/Table'
 
 export default function VisitorTable() {
 
-	const [visitor, setVisitor] = useState(VisitorDetails)
+	const [visitor, SetVisitor] = useState(VisitorDetails)
 	// const [levelData, setLevelData] = useState([])
 	const columns = [{
 		Header: 'Wallet Address',

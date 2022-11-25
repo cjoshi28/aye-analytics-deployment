@@ -3,7 +3,7 @@ import ReferrersDetails from '../Details/ReferrersDetails'
 import Table from '../../common/Table'
 
 export default function ReferrerTable() {
-    const [users, setUser] = useState(ReferrersDetails)
+    const [users, SetUser] = useState(ReferrersDetails)
 
     const columns = [{
         Header: 'Referrers',

@@ -11,41 +11,41 @@ import ResetPasswordForm from '../../components/ResetPasswordForm';
 import Swal from 'sweetalert2';
 export default function index() {
 
-  const [email, setEmail] = useState(null)
-  const [isLoader, setIsLoader] = useState(false)
+  const [email, SetEmail] = useState(null)
+  const [isLoader, SetIsLoader] = useState(false)
 
   const router = useRouter();
 
   async function forgotPasswordHandler(email) {
-    setIsLoader(true)
+    SetIsLoader(true)
     await axios.post(path.forgotpassword, {
       email: email
     }).then((response) => {
       // console.log(response)
       if (response.data.success == true) {
-        setEmail(email)
-        setIsLoader(false)
+        SetEmail(email)
+        SetIsLoader(false)
         SuccessModal("Successfully send", response.data.message,)
       } else {
         ErrorModal("Your forgot-password attempt was not successful. Please try again.", response.data.message)
       }
     }).catch((error) => {
       // console.log(error)
-      setIsLoader(false)
+      SetIsLoader(false)
       ErrorModal("sorry, we coudldn't find and email address with that username", error?.response?.data?.message || error?.message || "Please contact site Admin")
     })
   }
 
 
   async function resetpasswordHandler(password, OTP) {
-    setIsLoader(true)
+    SetIsLoader(true)
     await axios.put(path.resetpassword, {
       email: email,
       password: password,
       userOTP: OTP
     }).then((response) => {
       // console.log(response)
-      setIsLoader(false)
+      SetIsLoader(false)
       if (response.data.success == true) {
         SuccessModalWithRedirect("Success", response.data.message, "/login")
       } else {
@@ -53,7 +53,7 @@ export default function index() {
       }
     }).catch((error) => {
       // console.log(error)
-      setIsLoader(false)
+      SetIsLoader(false)
       ErrorModal("Something went wrong", error?.response?.data?.message || error?.message || "Please contact site Admin")
     })
   }

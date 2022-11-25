@@ -6,7 +6,7 @@ import Table from '../../common/Table'
 
 export default function RealtimeTable() {
 
-	const [visitor, setVisitor] = useState(RealVisitor)
+	const [visitor, SetVisitor] = useState(RealVisitor)
 	// const level = visitor.map((value, index) => {
 	//     return (value)
 	// })

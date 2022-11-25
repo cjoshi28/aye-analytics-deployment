@@ -16,9 +16,9 @@ import Link from "next/link";
 
 
 function Navbar() {
-  const [nav, setNav] = useState(false);
+  const [nav, SetNav] = useState(false);
   const handleNav = () => {
-    setNav(!nav);
+    SetNav(!nav);
   };
 
   const router = useRouter();

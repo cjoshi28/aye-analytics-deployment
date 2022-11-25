@@ -3,7 +3,7 @@ import Details from '../Details/Details'
 import Table from '../../common/Table'
 
 export default function UserTable() {
-  const [users, setUser] = useState(Details)
+  const [users, SetUser] = useState(Details)
 
   const columns = [{
     Header: 'Wallet Address',

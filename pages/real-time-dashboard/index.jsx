@@ -12,7 +12,7 @@ import RealTimeLogs from "../../components/Real-Time-Dashboard/RealTimeLogs";
 const RealChart = dynamic(() => { return import('../../components/Real-Time-Dashboard/RealChart') }, { ssr: false });
 
 export default function index() {
-	const [content, setContent] = useState("");
+	const [content, SetContent] = useState("");
 
 	const realStats = [
 		{
@@ -94,7 +94,7 @@ export default function index() {
 
 			<section className='w-full lg:flex'>
 				<div className="lg:w-8/12 w-full">
-					<Map setTooltipContent={setContent} />
+					<Map setTooltipContent={SetContent} />
 					<ReactTooltip>{content}</ReactTooltip>
 				</div>
 				<div className="lg:w-4/12  w-full">

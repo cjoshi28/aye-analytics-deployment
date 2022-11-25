@@ -1,9 +1,9 @@
 import { useState, createContext, useEffect } from "react";
 export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
-  const [loggedIn, setLoggedIn] = useState(false);
-  const [loading, setLoading] = useState(true)
-  const [data, setData] = useState({
+  const [loggedIn, SetLoggedIn] = useState(false);
+  const [loading, SetLoading] = useState(true)
+  const [data, SetData] = useState({
     name: "",
     token: ""
   });
@@ -12,34 +12,34 @@ const AuthProvider = ({ children }) => {
     const name = localStorage.getItem("User")
     const token = localStorage.getItem("Session")
     if (name != null && token != null) {
-      setLoggedIn(true)
-      setData({
+      SetLoggedIn(true)
+      SetData({
         name: localStorage.getItem("User"),
         token: localStorage.getItem("Session")
       })
     }
-    setLoading(false)
+    SetLoading(false)
   }, [])
   const login = (name, token) => {
     localStorage.setItem("Session", token)
     localStorage.setItem("User", name)
-    setLoggedIn(true);
-    setData({
+    SetLoggedIn(true);
+    SetData({
       name: localStorage.getItem("User"),
       token: localStorage.getItem("Session")
     });
     // setTimeout(() => {
     //   localStorage.setItem("Session","")
     //   localStorage.setItem("User", "")
-    //   setData([])
-    //   setLoggedIn(false);
+    //   SetData([])
+    //   SetLoggedIn(false);
     // }, ExpireSeconds)
   }
   const logout = value => {
     localStorage.setItem("Session", "")
     localStorage.setItem("User", "")
-    setLoggedIn(false);
-    setData([]);
+    SetLoggedIn(false);
+    SetData([]);
   }
   const contextValue = {
     status: {
@@ -50,7 +50,7 @@ const AuthProvider = ({ children }) => {
     },
     session: {
       data,
-      setData,
+      SetData,
     }
   };
   return (

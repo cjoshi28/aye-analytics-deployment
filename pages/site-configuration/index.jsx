@@ -12,8 +12,8 @@ import Link from 'next/link';
 export default function index() {
 
   const { session, status } = useContext(AuthContext)
-  const [websiteId, setWebsiteId] = useState(null)
-  const [isLoader, setIsLoader] = useState(false)
+  const [websiteId, SetWebsiteId] = useState(null)
+  const [isLoader, SetIsLoader] = useState(false)
   console.log(session)
 
   const router = useRouter();
@@ -25,7 +25,7 @@ export default function index() {
 
   async function siteConfigHandler(webName, webURL) {
     // console.log(session.data.token)
-    setIsLoader(true)
+    SetIsLoader(true)
     await axios.put(path.siteConfigure, {
       name: webName,
       website: webURL
@@ -35,16 +35,16 @@ export default function index() {
       }
     }).then((response) => {
       // console.log(response)
-      setIsLoader(false)
+      SetIsLoader(false)
       if (response.data.success == true) {
-        setWebsiteId(response.data.data.websiteId)
+        SetWebsiteId(response.data.data.websiteId)
         SuccessModal("Success", response.data.message)
       } else {
         ErrorModal("something went wrong", response?.data.message)
       }
     }).catch((error) => {
       // console.log(error)
-      setIsLoader(false)
+      SetIsLoader(false)
       ErrorModal("something went wrong", error?.response?.data?.message || error?.message || "Please contact site Admin")
     })
   }

@@ -3,7 +3,7 @@ import PagesDetails from '../Details/PagesDetails'
 import Table from '../../common/Table'
 
 export default function PageTable() {
-    const [users, setUser] = useState(PagesDetails)
+    const [users, SetUser] = useState(PagesDetails)
 
     const columns = [{
         Header: 'Pages',
