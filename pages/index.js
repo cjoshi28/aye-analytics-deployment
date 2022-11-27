@@ -98,7 +98,7 @@ export default function Home() {
           className="relative bg-white rounded-lg p-4 lg:w-9/12 text-gray-700 flex flex-col gap-2"
         >
           <p className="text-gray-900 font-medium">Result</p>
-          <small className="bloc">Here's what our AI came up with</small>
+          <small className="bloc">Heres what our AI came up with</small>
           <div
             className="relative bg-gray-100 rounded-lg p-4 text-sm"
           >
@@ -187,7 +187,7 @@ export default function Home() {
           </div>
           <div className="w-full flex flex-col gap-2">
             <p className="text-gray-900 font-medium">Result</p>
-            <small className="block">Here's what our AI came up with</small>
+            <small className="block">Heres what our AI came up with</small>
             <div className="bg-gray-900 rounded-lg p-4">
               <div className="animate-pulse flex space-x-4">
                 <div className="flex-1 space-y-2 py-1">
@@ -713,7 +713,7 @@ export default function Home() {
           <small className="mb-8 block"
             >This plan is suitable for teams of 1-15 people</small
           >
-          <p className="mb-4 text-white">What's included</p>
+          <p className="mb-4 text-white">Whats included</p>
           <p className="mb-2 block">10 Dedicated hosting</p>
           <p className="mb-2 block">Great for freelancers</p>
           <p className="mb-2 block">1 Year support</p>
@@ -731,7 +731,7 @@ export default function Home() {
           <small className="mb-8 block"
             >This plan is suitable for teams of 15-100 people</small
           >
-          <p className="mb-4 text-white">What's included</p>
+          <p className="mb-4 text-white">Whats included</p>
           <p className="mb-2 block">50 Dedicated hosting</p>
           <p className="mb-2 block">Great for Businesses</p>
           <p className="mb-2 block">2 Year support</p>
@@ -749,7 +749,7 @@ export default function Home() {
           <small className="mb-8 block"
             >This plan is suitable for teams of 100+ people</small
           >
-          <p className="mb-4 text-white">What's included</p>
+          <p className="mb-4 text-white">Whats included</p>
           <p className="mb-2 block">100 Dedicated hosting</p>
           <p className="mb-2 block">Great for enterprises</p>
           <p className="mb-2 block">4 Year support</p>
