@@ -1,6 +1,6 @@
 import React from 'react'
 import { RiLoader4Line } from "react-icons/ri";
-function FullScreenLoader() {
+export function FullScreenLoader() {
   return (
     <div className="backdrop-brightness-50 w-full h-full absolute inset-0 z-40 flex">
       <i className="absolute inset-0 z-50 flex justify-center items-center h-screen w-screen">
@@ -8,5 +8,3 @@ function FullScreenLoader() {
       </i>
     </div>
   )
-}
-export default FullScreenLoader
