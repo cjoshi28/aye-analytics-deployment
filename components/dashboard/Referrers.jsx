@@ -56,7 +56,7 @@ export default function Referrers() {
                 {
                     dashboardReferrers && dashboardReferrers.map((refer, index) => {
                         return (
-                            <div className='min-w-[150px] max-w-[150px] p-2'>
+                            <div className='min-w-[150px] max-w-[150px] p-2' key={index}>
                                 <ReferrerBox key={index} link={refer.link} value={refer.value} />
                             </div>
                         )
