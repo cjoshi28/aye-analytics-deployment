@@ -5,7 +5,7 @@ import RegisterForm from '../../components/RegisterForm'
 import { useRouter } from 'next/router'
 import { path } from '../../routes/path'
 import { ErrorModal } from '../../helper/helper'
-import { FullScreenLoader } from '../../components/common/FullscreenLoader'
+import { FullScreenLoader } from '../../components/common/FullScreenLoader'
 import Swal from 'sweetalert2'
 export default function Index() {
 

@@ -4,7 +4,7 @@ import Sidebar from '../dashboard/Sidebar'
 import { useContext, useEffect } from "react";
 import { useRouter } from 'next/router'
 import { AuthContext } from '../../provider/AuthProvider';
-import { FullScreenLoader } from './FullscreenLoader';
+import { FullScreenLoader } from './FullScreenLoader';
 function Layout({ children }) {
 
   const { status, session } = useContext(AuthContext);

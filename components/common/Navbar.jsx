@@ -4,7 +4,7 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import dashActive from '../../public/images/dashboard/dashboard-active.svg'
 import dashInactive from '../../public/images/dashboard/dashboard-inactive.svg'
 import realActive from '../../public/images/dashboard/realTime-active.svg'
-import realInactive from '../../public/images/dashboard/realTime.svg'
+import realInactive from '../../public/images/dashboard/RealTime.svg'
 import visitorActive from '../../public/images/dashboard/visitor-active.svg'
 import visitorInactive from '../../public/images/dashboard/visitor-inactive.svg'
 import chatActive from '../../public/images/dashboard/chat-active.svg'

@@ -6,7 +6,7 @@ import { ErrorModal, SuccessModal } from '../../helper/helper';
 import { AuthContext } from '../../provider/AuthProvider';
 import { path } from '../../routes/path';
 import CopyToClipboard from 'react-copy-to-clipboard';
-import { FullScreenLoader } from '../../components/common/FullscreenLoader';
+import { FullScreenLoader } from '../../components/common/FullScreenLoader';
 import Link from 'next/link';
 
 export default function Index() {

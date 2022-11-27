@@ -5,7 +5,7 @@ import ForgotPasswordForm from '../../components/ForgotPasswordForm'
 import Logo from '../../components/Logo'
 import { path } from '../../routes/path';
 import { ErrorModal } from '../../helper/helper';
-import { FullScreenLoader } from '../../components/common/FullscreenLoader';
+import { FullScreenLoader } from '../../components/common/FullScreenLoader';
 import { SuccessModal } from '../../helper/helper';
 import ResetPasswordForm from '../../components/ResetPasswordForm';
 import Swal from 'sweetalert2';
