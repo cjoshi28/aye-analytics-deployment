@@ -9,8 +9,8 @@ function Table({ columns, data }) {
   return (
     <table {...getTableProps()}>
       <thead>
-        {headerGroups.map(headerGroup => (
-          <tr {...headerGroup.getHeaderGroupProps()}>
+        {headerGroups.map((headerGroup,i) => (
+          <tr {...headerGroup.getHeaderGroupProps()} key={i}>
             {headerGroup.headers.map((column,i) => (
               <th {...column.getHeaderProps()} key={i}>{column.render('Header')}</th>
             ))}
